@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ERP - Payroll Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/fevicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="js/custom.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/checkmarkcrp.css" rel="stylesheet" type="text/css">
+<link href="css/crpresponsive.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!---left Navbar start here --->
+<nav id="sidebar">
+	<div class="sidebar-header"> <span class="logo"> <img src="images/logo-white.png"/> </span> <strong class="logo-icon"><img src="images/logo-icon.png"/></strong> </div>
+		<h4 class="left-nav-title">PAYROLL</h4>
+		  <ul class="panel-group" id="accordion2">
+				<li> <a href="dashboard.html" ><i class="fa fa-tachometer" aria-hidden="true"></i> <span>Dashboard</span> </a> </li>
+				
+				<li class="collapsegroup"><a href="#homeSubmenu" data-toggle="collapse" data-parent="#accordion2" class="dropdown-toggle mainnavcollapse "> <i class="fa fa-building-o"></i> <span> Company </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse" id="homeSubmenu">
+						<li> <a class="" href="index.html"> <i class="fa fa-wrench"></i> <span> Company Information</span></a> </li>
+						<li> <a class="companyinfo"  href="AddCoPayroll.html"> <i class="fa fa-wrench"></i> <span> Additional Information</span></a> </li>
+						<li> <a class="payrollsettings" href="federal-tax.html"><i class="fa fa-wrench"></i> <span> Payroll Settings</span></a></li>
+						<!-- <li class="collapsegroup"> -->
+							<!-- <a href="#homeSubmenu2" data-toggle="collapse" class="dropdown-toggle plusicon" aria-expanded="false"><i class="fa fa-wrench"></i><span>Accounting Settings</span><i class="subulicon fa fa-plus"></i> </a> -->
+							<!-- <ul class="collapse sidecollapse" id="homeSubmenu2"> -->
+								<!-- <li> <a><span>Profit Centers</span></a></li> -->
+								<!-- <li> <a><span>Chart of Accounts</span></a></li> -->
+								<!-- <li> <a><span>Interface Accounts</span></a></li> -->
+								<!-- <li> <a> <span>Account Balances</span></a></li> -->
+								<!-- <li> <a> <span>Financial Statements</span></a></li> -->
+								<!-- <li> <a> <span>Budget Amounts</span></a></li> -->
+								<!-- <li> <a> <span>Customer Setup</span></a></li> -->
+								<!-- <li> <a> <span>Vendor Setup</span></a></li> -->
+								<!-- <li> <a> <span>Item Setup</span></a></li> -->
+								<!-- <li> <a> <span>Job Setup</span></a></li> -->
+								<!-- <li> <a> <span>Sales Tax Setup</span></a></li> -->
+								<!-- <li> <a> <span> Salesperson Setup</span></a></li> -->
+								<!-- <li> <a> <span>Customer Terms</span></a></li> -->
+								<!-- <li> <a> <span>Ship Via</span></a></li> -->
+							<!-- </ul> -->
+						<!-- </li> -->
+					</ul>
+				</li>			
+				<li class="collapsegroup">
+					<a href="#homeSubmenu11" data-toggle="collapse" id="company" class="dropdown-toggle  mainnavcollapse "><i class="fa fa-user" aria-hidden="true"></i><span>Employees </span><img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse " id="homeSubmenu11">
+						<li class=""> <a class="active" href="employee-setup.html"> <i class="fa fa-user"></i> <span> Personal Information </span> </a></li>
+						<li> <a  href="addlnemployee-setup.html"><i class="fa fa-wrench"></i><span> Additional Information</span></a></li>
+					</ul>
+				</li>				
+				<li class="collapsegroup"><a href="#homeSubmenu3" data-toggle="collapse" data-parent="#accordion3" class="dropdown-toggle mainnavcollapse collapsed"  aria-expanded="undefined"> <i class="fa fa-usd"></i> <span>Run Payroll </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse in" id="homeSubmenu3">
+						<li> <a class="companyinfo"  href="distribute-hours.html"> <i class="fa fa-sitemap" aria-hidden="true"></i> <span> Distribute Hours</span></a> </li>
+						<li> <a class="" href="enter-hours.html"><i class="fa fa-clock-o" aria-hidden="true"></i> <span> Enter Hours</span></a></li>
+						<li> <a class="active"  href="calculate-index.html"> <i class="fa fa-calculator" aria-hidden="true"></i> <span> Calculate Pay</span></a> </li>
+						<li> <a class="payrollsettings" href="review-create-paychecks.html"> <i class="fa fa-file-text-o" aria-hidden="true"></i> <span> Review / Create Paychecks</span></a></li>
+						<li> <a class="companyinfo"  href="print-paychecks.html"> <i class="fa fa-print" aria-hidden="true"></i> <span> Print Paychecks</span></a> </li>
+						<li> <a class="payrollsettings" href="modify-paychecks.html"><i class="fa fa-pencil" aria-hidden="true"></i> <span> Modify Paychecks</span></a></li>
+						<li> <a class="companyinfo"  href="depts-jobs.html"> <i class="fa fa-th" aria-hidden="true"></i> <span> Allocate to Depts / Jobs</span></a> </li>
+						<li> <a class="payrollsettings" href="create-payments.html"> <i class="fa fa-usd" aria-hidden="true"></i> <span> Create Payments</span></a></li>
+						<li> <a class="companyinfo"  href="print-payments.html"> <i class="fa fa-file-text-o" aria-hidden="true"></i> <span> Print Payments</span></a> </li>
+						<li> <a class="payrollsettings" href="modify-payments.html"> <i class="fa fa-pencil" aria-hidden="true"></i> <span> Modify Payments</span></a></li>
+				    </ul>
+				</li>
+				
+			
+				<li class="collapsegroup"><a href="#homeSubmenu4" data-toggle="collapse" data-parent="#accordion4" class="dropdown-toggle" > <i class="fa fa-usd"></i> <span> Reports </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse " id="homeSubmenu4">
+						<li> <a class=""  href="employee-information.html"> <span> Employee Information</span></a> </li>
+						<li> <a class="payrollsettings" href="employee-earnings.html"> <span> Employee Earnings</span></a></li>
+						<li> <a class="payrollsettings"  href="employee-paychecks.html"> <span> Employee Paychecks</span></a> </li>
+						<li> <a class="payrollsettings" href="employee-department-jobs.html"> <span> Departments/Jobs</span></a></li>
+						<li> <a class="payrollsettings"  href="federal-taxes.html"> <span> Federal Taxes</span></a> </li>
+						<li> <a class="payrollsettings" href="FUTATax-940.html"> <span> 940 FUTA Tax</span></a></li>
+						<li> <a class="payrollsettings"  href="state-taxes.html"> <span> State Taxes</span></a> </li>
+						<li> <a class="payrollsettings" href="local-taxes.html">  <span> Local Taxes</span></a></li>
+						<li> <a class="payrollsettings"  href="income-deductions.html">  <span> Income Deductions</span></a> </li>
+						<li> <a class="payrollsettings" href="employer-payments.html"> <span> Employer Payments</span></a></li>
+						<li> <a class="" href="w2w3-statements.html"> <span> W2 & W3 Statement</span></a></li>
+				    </ul>
+				</li>
+				
+		  </ul>
+		<h4 class="left-nav-title-others">OTHER</h4>
+	  <ul>
+            <li><a class="" href="HelpCenter.html"><i class="fa fa-info-circle"></i><span>Help Center</span></a></li>
+            <li><a class="paperprod" href="https://www.checkmark.com/store/paper-products" target="_blank"><i class="fa fa-file"></i><span>Paper Products</span></a></li>          
+        </ul>
+	  <div class="upgrade-premimum">
+			<p>Upgrade to Access Premium Features </p>
+			<button class="upgrade-btn"> Upgrade</button>
+	  </div>
+	  <a class="upgrade-star" href="#" title="Upgrade"><i class="fa fa-star" aria-hidden="true"></i></a>
+	  <nav class="navbar navbar-expand-lg navbar-light">
+			<button type="button" id="sidebarCollapse" class="left-panel-toggle"><img src="images/collapse-icon.png"/> <span> Collapse Menu </span></button>
+	  </nav>
+</nav>
+<!---left Navbar end here --->
+
+<div class="page-content" id="right-content">
+  <div class="container-fluid">
+    <div class="top-bar"> 
+			<nav class="navbar2 navbar-expand-lg navbar-light">
+				<button type="button" id="sidebarCollapse2" class="left-panel-toggle2"> <i class="fa fa-align-left" aria-hidden="true"></i> </button>
+			</nav>
+			<span class="user-logo">Infosys Technologies</span>
+			<!-- <div class="payroll-year">  -->
+				<!-- <span> <i class="fa fa-calendar" aria-hidden="true"></i> -->
+					<!-- <select> -->
+					  <!-- <option> Payroll Year </option> -->
+					  <!-- <option> 2019</option> -->
+					  <!-- <option> 2018</option> -->
+					<!-- </select> -->
+				<!-- </span>  -->
+				<!-- <span> <i class="fa fa-user-o" aria-hidden="true"></i> -->
+					<!-- <select> -->
+					  <!-- <option> Client </option> -->
+					  <!-- <option> Full Service</option> -->
+					  <!-- <option> Self Service</option> -->
+					<!-- </select> -->
+				<!-- </span>  -->
+			<!-- </div> -->
+		  <!---user setting start here --->
+		  <div class="dropdown user-settings"> <span class="profile-pic">B</span>
+			<button class="btn" type="button" data-toggle="dropdown"> <img src="images/select-arrow2.png"/> </button>
+			<ul class="dropdown-menu">
+			  <li><a tabindex="-1" href="#"> <span class="user-name">B</span>
+				<p> <span>Bhavani Tadepalli</span> <span>btadepalli@checkmark.in</span> <span>Customer#: 122122</span> </p>
+				</a></li>
+				<li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> Account</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> User Management</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-lock custlock"></i> Change Password</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> Preferences</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+			</ul>
+		  </div>
+		  <!---user setting end here ---> 		  
+		</div>
+		<!--- body Rendering--->
+			<div class="right-workspace"> 
+				 <div class="heading-button-row">
+					<h3 class="branch-head"><i class="fa fa-calculator" aria-hidden="true"></i> Calculate Pay</h3>
+				</div>
+				<div class="workspace-content">
+					<div class="row mt-2">
+						<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+							<div class="left-list-item">
+								<span class="head">Employees </span>
+								<form class="search">
+									<div class="search__wrapper">
+										<input id="listSearchInput" type="text" onkeyup="myFunctionAuto()" placeholder="Search for..." class="search__field firstInput" tabindex="1">
+										<button type="submit" id="search" class="fa fa-search search__icon"></button>
+									</div>
+								</form>
+								<!--<button class="search-item-btn" type="submit"><i class="fa fa-search"></i></button>-->
+								<ul id="listItems" tabindex="2">
+									<li class="active"> <a href=""> Tadepalli, Bhavani </a></li>
+									<li><a href="">  Fisher, Kristi </a></li>
+									<li><a href="">  Thomson, Anne </a></li>
+									<li><a href="">  Ghani, Sayeeda </a></li>
+								</ul>
+							</div>
+						</div>
+						<!--  </div>-->
+						<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+							<div class="table-responsive">
+								<table class="table table-striped ledger-table">
+									<thead tabindex="3">
+										<tr class="filters">
+											<th></th>
+											<th>Hours</th>
+											<th>Rate</th>
+											<th>Amount</th>
+										</tr>
+									</thead>
+									<tbody tabindex="4">
+										<tr>
+											<td>Regular</td>
+											<td>5.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+										</tr>
+										<tr>
+											<td>Overtime</td>
+											<td>12.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+										</tr>
+										<tr>
+											<td>DblTime</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+										</tr>
+										<tr>
+											<td>PayRate2</td>
+											<td>2.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+										</tr>
+										<tr>
+											<td>PayRate3</td>
+											<td>6.20</td>
+											<td>0.00</td>
+											<td>0.00</td>
+										</tr>
+										<tr>
+											<td>Sick</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+										</tr>
+										<tr>
+											<td>Vacation</td>
+											<td>2.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+										</tr>
+										<tr>
+											<td>Comp</td>
+											<td>6.20</td>
+											<td>0.00</td>
+											<td>0.00</td>
+										</tr>
+										<tr>
+											<td>Holiday</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+										</tr>
+										<tr class="tr-total">
+											<td>Total</td>
+											<td colspan="3">33.4</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<button class="btn btn-dark2" type="submit" value="Import" onclick="openNavICalcHr()" tabindex="5">Edit Hours</button>
+								<button class="btn btn-dark2" type="submit" value="Import" onclick="openNavICalcinc()" tabindex="6">Edit Income</button>
+								<button class="btn btn-dark2" type="submit" value="Import" onclick="openNavICalcImInc()" tabindex="7">Import Income</button>
+								<button class="btn btn-dark2" type="submit" value="Import" onclick="openNavICalcded()" tabindex="8">Import Deductions</button>
+								<button class="btn btn-dark2" type="submit" value="Import" onclick="openNavICalcdis()" tabindex="9">Disable Calculations</button>
+								<button class="btn btn-dark2" type="submit" value="Import" onclick="openNavICalcall()" tabindex="10">Calculate All</button>
+								<button class="btn btn-dark2" type="submit" value="Import" tabindex="11">Save</button>
+								<button class="btn btn-dark2" type="submit" value="Import" data-toggle="modal" data-target="#myModal" tabindex="12">Undo</button>
+								<button class="btn btn-primary6" type="submit" value="New" onclick="openNavICalcchk()" tabindex="13">Create Check</button>
+							</div>
+						</div>
+					</div>
+					<br />
+					<hr>
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+							<div class="form-group">
+								<label class="control-label">Check Date</label>
+								<div id="datepicker4" class="input-group date" data-date-format="mm/dd/yyyy">
+									<input class="form-control" type="text" name="fname" placeholder="10/02/2020">
+									<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+							<div class="form-group">
+								<label class="control-label">Period Start</label>
+								<div id="datepicker5" class="input-group date" data-date-format="mm/dd/yyyy">
+									<input class="form-control" type="text" name="fname" placeholder="10/02/2020">
+									<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+							<div class="form-group">
+								<label class="control-label">Period End</label>
+								<div id="datepicker6" class="input-group date" data-date-format="mm/dd/yyyy">
+									<input class="form-control" type="text" name="fname" placeholder="10/02/2020">
+									<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!---income, decutions and taxes start here -->
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="calc-income">
+								<div class="form-group">
+									<span class="feilds-sub-heading">
+										Income
+									</span>
+									<div class="tooltip" style="top:1px;">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<p class="tooltiptext-s">
+											<span> Dummy text here, will place content later...RK</span>
+										</p>
+									</div>
+
+								</div>
+								<div class="form-group">
+									<label class="control-label">Hourly Pay</label>
+									<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="14">
+								</div>
+								<div class="form-group">
+									<label class="control-label">Salary</label>
+									<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="15">
+								</div>
+								<div class="form-group">
+									<label class="control-label">Bonus</label>
+									<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="16">
+								</div>
+								<div class="form-group">
+									<label class="control-label">Profit Share</label>
+									<input class="form-control" type="text" name="fname" placeholder="1000" tabindex="17">
+								</div>
+								<div class="form-group">
+									<label class="control-label">Reported Tip</label>
+									<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="18">
+								</div>
+								<div class="calc-dedu-tax grswagewidth">
+									<div class="form-group">
+										<label class="control-label text-right">Gross Wages </label>
+									</div>
+									<div class="form-group">
+										<label class="control-label"></label>
+										<input class="form-control" type="text" name="fname" placeholder="1000" tabindex="19">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<div class="calc-decutions">
+								<div class="form-group">
+									<span class="feilds-sub-heading">
+										Deductions
+									</span>
+									<div class="tooltip" style="top:1px;">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<p class="tooltiptext-s">
+											<span> Dummy text here, will place content later...RK</span>
+										</p>
+									</div>
+								</div>
+								<div class="calc-dedu-tax">
+									<div class="form-group">
+										<label class="control-label">401(k)</label>
+										<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="20">
+									</div>
+									<div class="form-group">
+										<label class="control-label"></label>
+										<input class="form-control" type="text" name="fname" placeholder="1000" tabindex="21">
+									</div>
+								</div>
+								<div class="calc-dedu-tax">
+									<div class="form-group">
+										<label class="control-label">Cafe Plan </label>
+										<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="22">
+									</div>
+									<div class="form-group">
+										<label class="control-label"></label>
+										<input class="form-control" type="text" name="fname" placeholder="1000" tabindex="23">
+									</div>
+								</div>
+								<div class="calc-dedu-tax">
+									<div class="form-group">
+										<label class="control-label">ETT </label>
+										<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="24">
+									</div>
+									<div class="form-group">
+										<label class="control-label"></label>
+										<input class="form-control" type="text" name="fname" placeholder="1000" tabindex="25">
+									</div>
+								</div>
+								<div class="calc-dedu-tax">
+									<div class="form-group">
+										<label class="control-label">United Way </label>
+										<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="26">
+									</div>
+									<div class="form-group">
+										<label class="control-label"></label>
+										<input class="form-control" type="text" name="fname" placeholder="1000" tabindex="27">
+									</div>
+								</div>
+								<div class="calc-dedu-tax">
+									<div class="form-group">
+										<label class="control-label">Roth 401K </label>
+										<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="28">
+									</div>
+									<div class="form-group">
+										<label class="control-label"></label>
+										<input class="form-control" type="text" name="fname" placeholder="1000" tabindex="29">
+									</div>
+								</div>
+								<div class="calc-dedu-tax">
+									<div class="form-group">
+										<label class="control-label text-right">Net </label>
+									</div>
+									<div class="form-group">
+										<label class="control-label"></label>
+										<input class="form-control" type="text" name="fname" placeholder="1000" tabindex="30">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-5 col-sm-9 col-xs-12">
+							<div class="calc-taxes">
+								<div class="form-group">
+									<span class="feilds-sub-heading">
+										Taxes
+									</span>
+									<div class="tooltip" style="top:1px;">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<p class="tooltiptext-s">
+											<span> Dummy text here, will place content later...RK</span>
+										</p>
+									</div>
+								</div>
+								<div class="calc-dedu-tax">
+									<div class="form-group">
+										<label class="control-label">Roth 401K </label>
+										<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="31">
+									</div>
+								</div>
+								<div class="calc-dedu-tax">
+									<div class="form-group">
+										<label class="control-label">Roth 401K </label>
+										<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="32">
+									</div>
+									<div class="form-group">
+										<label class="control-label"></label>
+										<input class="form-control" type="text" name="fname" placeholder="1000" tabindex="33">
+									</div>
+								</div>
+								<div class="calc-dedu-tax">
+									<div class="form-group">
+										<label class="control-label">Roth 401K </label>
+										<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="34">
+									</div>
+									<div class="form-group">
+										<label class="control-label"></label>
+										<input class="form-control" type="text" name="fname" placeholder="1000" tabindex="35">
+									</div>
+								</div>
+								<div class="calc-dedu-tax">
+									<div class="form-group">
+										<label class="control-label">Roth 401K </label>
+										<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="36">
+									</div>
+								</div>
+								<div class="calc-dedu-tax">
+									<div class="form-group">
+										<label class="control-label">Roth 401K </label>
+										<input class="form-control" type="text" name="fname" placeholder="0.00" tabindex="37">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					 <div class="col-lg-12 col-md-8 col-sm-12 col-xs-12 text-center mt-3 mb-3">
+						<input class="btn btn-primary" type="submit" value="Save" tabindex="38">
+						<input class="btn btn-danger" type="submit" value="Cancel" tabindex="39">
+						<div class="focusguard" tabindex="40"></div>
+					</div>
+				</div>
+			<p class="copy-rights-link"> © 2019 CheckMark, Inc.   | <a href="https://www.checkmark.com/" target="_blank" tabindex="-1"> Home </a> | <a href="https://www.checkmark.com/account/add-ticket" target="_blank" tabindex="-1"> Support </a> | <a href="https://blog.checkmark.com/" target="_blank" tabindex="-1"> Blog </a> | <a href="https://kb.checkmark.com/" target="_blank" tabindex="-1"> Knowledge Base </a> | <a href="https://www.checkmark.com/privacy-policy" target="_blank" tabindex="-1"> Privacy Policy </a> | <a href="https://www.checkmark.com/terms-of-Service" target="_blank" tabindex="-1"> Terms of Service </a> | <a href="https://www.checkmark.com/contact-us" target="_blank" tabindex="-1"> Contact Us </a> </p>
+		</div>
+	</div>
+</div>
+<!---------popups----------->
+<!------import income popup-------->
+<div id="RightSidePopup22" class="overlay">
+    <div class="r-pop-content-s">
+        <div class="pop_head">
+            <h3>Import Income</h3>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavICalcImInc()" title="Close">&times;</a>
+        </div>
+        <div class="overlay-content">
+            <div class="row mt-4">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <span>Import Hours using the follwing match </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="radio-inline firstInput2" tabindex="41">
+                            <input type="radio" class="radio" name="radio" value="empname" id="enameradio">
+                            <label>Employee Name</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="radio-inline" tabindex="42">
+                            <input type="radio" class="radio" name="radio" value="SS" id="ssnradio">
+                            <label>Social Security #</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="radio-inline" tabindex="43">
+                            <input type="radio" class="radio" name="radio" value="empss" id="essnradio">
+                            <label>Employee Name And Social Security #</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span>Choose File</span>
+						<div class="input-container mb-3 mt-0">
+							<input type="file" name="file" id="file" accept=".txt,.csv" style="display:none" class="fileUplaod">
+							<input type="button" class="browse-btn firstInput" id="fileupload" name="Image Upload" text="Choose File" value="Choose File" accept=".csv" tabindex="32">
+							<span id="filename" class="file-info"></span><i class="fa fa-times logoremove" title="Remove Company Logo"></i>                            
+							<div id="validatefileUplaod" class="field-validation-error"></div>
+						</div>
+					</div>
+                    <div>
+                        <input class="btn btn-primary" type="submit" name="save" id="fileUplaodId" value="Ok" tabindex="45" />
+                        <input class="btn btn-danger" type="submit" name="cancel" value="Cancel" tabindex="46" />
+                        <div class="focusguard2" tabindex="47"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------edit hour popup-------->
+<div id="RightSidePopup20" class="overlay">
+    <div class="r-pop-content">
+        <div class="pop_head">
+            <h3>Edit Hour</h3>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavICalcHr()" title="Close">&times;</a>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="overlay-content">
+                <div class="table-responsive">
+                    <table class="table table-striped dist-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Hours</th>
+                                <th>Rate</th>
+                                <th>Amount</th>
+                                <th>Accured</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span>Regular</span> </td>
+                                <td> <input type="text" value="22"></td>
+                                <td> <input type="text" value="0.00"></td>
+                                <td> <span> 0.00 </span></td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td><span>Overtime</span> </td>
+                                <td> <input type="text" value="68"></td>
+                                <td> <input type="text" value="0.00"></td>
+                                <td> <span> 0.00 </span></td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td><span>DblTime</span> </td>
+                                <td> <input type="text" value="73.5"></td>
+                                <td> <input type="text" value="0.00"></td>
+                                <td> <span> 0.00 </span></td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td><span>PayRate2</span> </td>
+                                <td> <input type="text" value="59"></td>
+                                <td> <input type="text" value="0.00"></td>
+                                <td> <span> 0.00 </span></td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td><span>PayRate3</span> </td>
+                                <td> <input type="text" value="67"></td>
+                                <td> <input type="text" value="0.00"></td>
+                                <td> <span> 0.00 </span></td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td><span>Sick</span> </td>
+                                <td> <input type="text" value="68"></td>
+                                <td> <input type="text" value="0.00"></td>
+                                <td> <span> 0.00 </span></td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td><span>Vacation</span> </td>
+                                <td> <input type="text" value="73.5"></td>
+                                <td> <input type="text" value="0.00"></td>
+                                <td> <span> 0.00 </span></td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td><span>Comp</span> </td>
+                                <td> <input type="text" value="59"></td>
+                                <td> <input type="text" value="0.00"></td>
+                                <td> <span> 0.00 </span></td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td><span>Holiday</span> </td>
+                                <td> <input type="text" value="67"></td>
+                                <td> <input type="text" value="0.00"></td>
+                                <td> <span> 0.00 </span></td>
+                                <td> </td>
+                            </tr>
+                            <tr class="tr-total">
+                                <td>Total </td>
+                                <td>67 </td>
+                                <td> </td>
+                                <td>0.00 </td>
+                                <td> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <input class="btn btn-primary" type="submit" name="save" id="fileUplaodId" value="Ok">
+                <input class="btn btn-danger" type="submit" name="cancel" value="Cancel">
+            </div>
+        </div>
+    </div>
+</div>
+<!------edit income popup-------->
+<div id="RightSidePopup21" class="overlay">
+    <div class="r-pop-content-s">
+        <div class="pop_head">
+            <h3>Edit Income</h3>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavICalcinc()" title="Close">&times;</a>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="overlay-content">
+                <h5>Mileage</h5>
+                <div class="form-group">
+                    <label>Quantity </label>
+                    <input class="form-control firstInput4" id="CatgName" maxlength="20" name="CatgName" onfocusout="ValidateCatgName()" type="text" value="" tabindex="55">
+                    <span class="field-validation-error CatgnewNameError" id="CatgnewNameError"></span>
+                </div>
+                <div class="form-group">
+                    <label>Rate </label>
+                    <input class="form-control" id="CatgName" maxlength="20" name="CatgName" onfocusout="ValidateCatgName()" type="text" value="" tabindex="56">
+                    <span class="field-validation-error CatgnewNameError" id="CatgnewNameError"></span>
+                </div>
+                <div class="form-group">
+                    <label>Amount </label>
+                    <input class="form-control" id="CatgName" maxlength="20" name="CatgName" onfocusout="ValidateCatgName()" type="text" value="" tabindex="57">
+                    <span class="field-validation-error CatgnewNameError" id="CatgnewNameError"></span>
+                </div>
+                <input class="btn btn-primary" type="submit" name="save" id="fileUplaodId" value="Ok" tabindex="58">
+                <input class="btn btn-danger" type="submit" name="cancel" value="Cancel" tabindex="59">
+                <div class="focusguard4" tabindex="60"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------import deduction popup-------->
+<div id="RightSidePopup23" class="overlay">
+    <div class="r-pop-content-s">
+        <div class="pop_head">
+            <h3>Import Deduction</h3>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavICalcded()" title="Close">&times;</a>
+        </div>
+        <div class="overlay-content">
+            <div class="row mt-4">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <span>Import Hours using the follwing match </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="radio-inline firstInput8" tabindex="76">
+                            <input type="radio" class="radio" name="radio1" id="empname" value="empname" >
+                            <label>Employee Name</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="radio-inline" tabindex="77">
+                            <input type="radio" class="radio" name="radio1" id="SS" value="SS">
+                            <label>Social Security #</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="radio-inline" tabindex="78">
+                            <input type="radio" class="radio" name="radio1" id="empss" value="empss">
+                            <label>Employee Name And Social Security #</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+						<span>Choose File</span>
+						<div class="input-container mb-3 mt-0">
+							<input type="file" name="file" id="file" accept=".txt,.csv" style="display:none" class="fileUplaod">
+							<input type="button" class="browse-btn firstInput" id="fileupload" name="Image Upload" text="Choose File" value="Choose File" accept=".csv" tabindex="32">
+							<span id="filename" class="file-info"></span><i class="fa fa-times logoremove" title="Remove Company Logo"></i>                            
+							<div id="validatefileUplaod" class="field-validation-error"></div>
+						</div>
+					</div>
+                    <div>
+                        <input class="btn btn-primary" type="submit" name="save" id="fileImportID" value="Ok" tabindex="80" />
+                        <input class="btn btn-danger" type="submit" name="cancel" value="Cancel" tabindex="81" />
+                        <div class="focusguard8" tabindex="82"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------calculate all popup-------->
+<div id="RightSidePopup25" class="overlay">
+    <div class="r-pop-content-s">
+        <div class="pop_head">
+            <h3>Calculate All</h3>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavICalcall()" title="Close">&times;</a>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="overlay-content">
+			   <div class="form-group">
+				<label class="control-label">Frequencies</label>
+				   <label class="checkbox firstInput6" tabindex="67">
+					   Weekly
+					   <input type="checkbox">
+					   <span class="checkmark"></span>
+				   </label>
+                </div>
+                <input class="btn btn-primary" type="submit" name="save" id="fileUplaodId" value="Ok" tabindex="68">
+                <input class="btn btn-danger" type="submit" name="cancel" value="Cancel" tabindex="69">
+                <div class="focusguard6" tabindex="70"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------disabled calculation popup-------->
+<div id="RightSidePopup24" class="overlay">
+    <div class="r-pop-content">
+        <div class="pop_head">
+            <h3>Disable Calculations</h3>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavICalcdis()" title="Close">×</a>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="overlay-content">
+				<div class="row">
+					<h4>Select Deductions to disable</h4>
+					<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 disableCalcList" tabindex="69">
+						<div class="form-group">
+							<label class="custcheckbox">
+									<input type="checkbox" >
+									<span class="checkspan"> 401(k)</span>
+							</label>
+								</div>
+							<div class="form-group">
+							<label class="custcheckbox">
+									<input type="checkbox">
+									<span class="checkspan"> Cafe Plan</span>
+							</label>
+								</div>
+							<div class="form-group">
+							<label class="custcheckbox">
+									<input type="checkbox">
+									<span class="checkspan"> ETT</span>
+							</label>
+								</div>
+							<div class="form-group">
+							<label class="custcheckbox">
+									<input type="checkbox">
+									<span class="checkspan"> Roth 401K</span>
+							</label>
+						</div>
+                    </div>
+					<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+						<div class="">
+							<label class="custcheckbox" tabindex="72">
+								<input  type="checkbox" value="true">
+								<span class="checkspan">Disable Hour Accruals</span>
+							</label>
+						</div>
+						<div class="">
+							<label class="custcheckbox" tabindex="73">
+								<input type="checkbox" value="true">
+								<span class="control-label checkspan" style="font-size:14px;">Disable All Calculations</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row text-center mt-15p">
+					<input class="btn btn-primary" type="submit" name="save" id="btnCheckOK" value="OK" tabindex="74">
+					<input class="btn btn-danger" type="button" name="cancel" value="Cancel" onclick="closeNavICalcdis()" tabindex="75">
+					<div class="focusguard8" tabindex="76"></div>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+<!------create check popup-------->
+<div id="RightSidePopup26" class="overlay">
+    <div class="r-pop-content-s">
+        <div class="pop_head">
+            <h3>Create Check</h3>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavICalcchk()" title="Close">&times;</a>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="overlay-content">
+                <div class="form-group">
+                    <label>Check # </label>
+                    <input class="form-control firstInput7" id="CatgName" maxlength="20" name="CatgName" onfocusout="ValidateCatgName()" type="text" value="169" tabindex="71">
+                    <span class="field-validation-error CatgnewNameError" id="CatgnewNameError"></span>
+                </div>
+                <div class="form-group">
+                    <label>Direct Deposit # </label>
+                    <input class="form-control" id="CatgName" maxlength="20" name="CatgName" onfocusout="ValidateCatgName()" type="text" value="8" tabindex="72">
+                    <span class="field-validation-error CatgnewNameError" id="CatgnewNameError"></span>
+                </div>
+                <input class="btn btn-primary" type="submit" name="save" id="fileUplaodId" value="Ok" tabindex="73">
+                <input class="btn btn-danger" type="submit" name="cancel" value="Cancel" tabindex="74">
+                <div class="focusguard7" tabindex="75"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Undo Values popup-->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content4">
+            <div class="modal-header2">
+                <button type="button" class="close" id="crossclose" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title2">Undo all calculation?</h4>
+            </div>
+            <div class="modal-body2">
+                <p>Do you want to undo calculations for all employees?</p>
+                <p>NOTE: Imported income quantities and amounts will need to be reentered.</p>
+            </div>
+            <div class="modal-footer2">
+                <input class="btn btn-primary" type="submit" data-dismiss="modal" value="Yes" id="Yes">
+                <input class="btn btn-dark" type="submit" data-dismiss="modal" value="No" id="No">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/datepicker.js"></script>
+<link href="css/datepicker.css" rel="stylesheet" type="text/css" />
+</body>
+</html>

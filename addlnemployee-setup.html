@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ERP - Payroll Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/fevicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="js/custom.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/checkmarkcrp.css" rel="stylesheet" type="text/css">
+<link href="css/crpresponsive.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!---left Navbar start here --->
+<nav id="sidebar">
+	<div class="sidebar-header"> <span class="logo"> <img src="images/logo-white.png"/> </span> <strong class="logo-icon"><img src="images/logo-icon.png"/></strong> </div>
+		<h4 class="left-nav-title">PAYROLL</h4>
+		  <ul class="panel-group" id="accordion2">
+				<li> <a href="dashboard.html" ><i class="fa fa-tachometer" aria-hidden="true"></i> <span>Dashboard</span> </a> </li>
+				
+				<li class="collapsegroup"><a href="#homeSubmenu" data-toggle="collapse" data-parent="#accordion2" class="dropdown-toggle mainnavcollapse "> <i class="fa fa-building-o"></i> <span> Company </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse" id="homeSubmenu">
+						<li> <a class="" href="index.html"> <i class="fa fa-wrench"></i> <span> Company Information</span></a> </li>
+						<li> <a class="companyinfo"  href="AddCoPayroll.html"> <i class="fa fa-wrench"></i> <span> Additional Information</span></a> </li>
+						<li> <a class="payrollsettings" href="federal-tax.html"><i class="fa fa-wrench"></i> <span> Payroll Settings</span></a></li>
+						<!-- <li class="collapsegroup"> -->
+							<!-- <a href="#homeSubmenu2" data-toggle="collapse" class="dropdown-toggle plusicon" aria-expanded="false"><i class="fa fa-wrench"></i><span>Accounting Settings</span><i class="subulicon fa fa-plus"></i> </a> -->
+							<!-- <ul class="collapse sidecollapse" id="homeSubmenu2"> -->
+								<!-- <li> <a><span>Profit Centers</span></a></li> -->
+								<!-- <li> <a><span>Chart of Accounts</span></a></li> -->
+								<!-- <li> <a><span>Interface Accounts</span></a></li> -->
+								<!-- <li> <a> <span>Account Balances</span></a></li> -->
+								<!-- <li> <a> <span>Financial Statements</span></a></li> -->
+								<!-- <li> <a> <span>Budget Amounts</span></a></li> -->
+								<!-- <li> <a> <span>Customer Setup</span></a></li> -->
+								<!-- <li> <a> <span>Vendor Setup</span></a></li> -->
+								<!-- <li> <a> <span>Item Setup</span></a></li> -->
+								<!-- <li> <a> <span>Job Setup</span></a></li> -->
+								<!-- <li> <a> <span>Sales Tax Setup</span></a></li> -->
+								<!-- <li> <a> <span> Salesperson Setup</span></a></li> -->
+								<!-- <li> <a> <span>Customer Terms</span></a></li> -->
+								<!-- <li> <a> <span>Ship Via</span></a></li> -->
+							<!-- </ul> -->
+						<!-- </li> -->
+					</ul>
+				</li>			
+				<li class="collapsegroup">
+					<a href="#homeSubmenu11" data-toggle="collapse" id="company" class="dropdown-toggle  mainnavcollapse collapsed" aria-expanded="undefined"><i class="fa fa-user" aria-hidden="true"></i><span>Employees </span><img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse in" id="homeSubmenu11">
+						<li class=""> <a href="employee-setup.html"> <i class="fa fa-user"></i> <span> Personal Information </span> </a></li>
+						<li> <a class="active" href="addlnemployee-setup.html"><i class="fa fa-wrench"></i><span> Additional Information</span></a></li>
+					</ul>
+				</li>				
+				<li class="collapsegroup"><a href="#homeSubmenu3" data-toggle="collapse" data-parent="#accordion3" class="dropdown-toggle mainnavcollapse" > <i class="fa fa-usd"></i> <span>Run Payroll </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse" id="homeSubmenu3">
+						<li> <a class="companyinfo"  href="distribute-hours.html"> <i class="fa fa-sitemap" aria-hidden="true"></i> <span> Distribute Hours</span></a> </li>
+						<li> <a class="payrollsettings" href="enter-hours.html"><i class="fa fa-clock-o" aria-hidden="true"></i> <span> Enter Hours</span></a></li>
+						<li> <a class="companyinfo"  href="calculate-index.html"> <i class="fa fa-calculator" aria-hidden="true"></i> <span> Calculate Pay</span></a> </li>
+						<li> <a class="payrollsettings" href="review-create-paychecks.html"> <i class="fa fa-file-text-o" aria-hidden="true"></i> <span> Review / Create Paychecks</span></a></li>
+						<li> <a class="companyinfo"  href="print-paychecks.html"> <i class="fa fa-print" aria-hidden="true"></i> <span> Print Paychecks</span></a> </li>
+						<li> <a class="payrollsettings" href="modify-paychecks.html"><i class="fa fa-pencil" aria-hidden="true"></i> <span> Modify Paychecks</span></a></li>
+						<li> <a class="companyinfo"  href="depts-jobs.html"> <i class="fa fa-th" aria-hidden="true"></i> <span> Allocate to Depts / Jobs</span></a> </li>
+						<li> <a class="payrollsettings" href="create-payments.html"> <i class="fa fa-usd" aria-hidden="true"></i> <span> Create Payments</span></a></li>
+						<li> <a class="companyinfo"  href="print-payments.html"> <i class="fa fa-file-text-o" aria-hidden="true"></i> <span> Print Payments</span></a> </li>
+						<li> <a class="payrollsettings" href="modify-payments.html"> <i class="fa fa-pencil" aria-hidden="true"></i> <span> Modify Payments</span></a></li>
+				    </ul>
+				</li>
+				
+			
+				<li class="collapsegroup"><a href="#homeSubmenu4" data-toggle="collapse" data-parent="#accordion4" class="dropdown-toggle" > <i class="fa fa-usd"></i> <span> Reports </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse " id="homeSubmenu4">
+						<li> <a class=""  href="employee-information.html"> <span> Employee Information</span></a> </li>
+						<li> <a class="payrollsettings" href="employee-earnings.html"> <span> Employee Earnings</span></a></li>
+						<li> <a class="payrollsettings"  href="employee-paychecks.html"> <span> Employee Paychecks</span></a> </li>
+						<li> <a class="payrollsettings" href="employee-department-jobs.html"> <span> Departments/Jobs</span></a></li>
+						<li> <a class="payrollsettings"  href="federal-taxes.html"> <span> Federal Taxes</span></a> </li>
+						<li> <a class="payrollsettings" href="FUTATax-940.html"> <span> 940 FUTA Tax</span></a></li>
+						<li> <a class="payrollsettings"  href="state-taxes.html"> <span> State Taxes</span></a> </li>
+						<li> <a class="payrollsettings" href="local-taxes.html">  <span> Local Taxes</span></a></li>
+						<li> <a class="payrollsettings"  href="income-deductions.html">  <span> Income Deductions</span></a> </li>
+						<li> <a class="payrollsettings" href="employer-payments.html"> <span> Employer Payments</span></a></li>
+						<li> <a class="" href="w2w3-statements.html"> <span> W2 & W3 Statement</span></a></li>
+				    </ul>
+				</li>
+				
+		  </ul>
+		<h4 class="left-nav-title-others">OTHER</h4>
+	  <ul>
+            <li><a class="" href="HelpCenter.html"><i class="fa fa-info-circle"></i><span>Help Center</span></a></li>
+            <li><a class="paperprod" href="https://www.checkmark.com/store/paper-products" target="_blank"><i class="fa fa-file"></i><span>Paper Products</span></a></li>          
+        </ul>
+	  <div class="upgrade-premimum">
+			<p>Upgrade to Access Premium Features </p>
+			<button class="upgrade-btn"> Upgrade</button>
+	  </div>
+	  <a class="upgrade-star" href="#" title="Upgrade"><i class="fa fa-star" aria-hidden="true"></i></a>
+	  <nav class="navbar navbar-expand-lg navbar-light">
+			<button type="button" id="sidebarCollapse" class="left-panel-toggle"><img src="images/collapse-icon.png"/> <span> Collapse Menu </span></button>
+	  </nav>
+</nav>
+<!---left Navbar end here --->
+
+<div class="page-content" id="right-content">
+  <div class="container-fluid">
+    <div class="top-bar"> 
+			<nav class="navbar2 navbar-expand-lg navbar-light">
+				<button type="button" id="sidebarCollapse2" class="left-panel-toggle2"> <i class="fa fa-align-left" aria-hidden="true"></i> </button>
+			</nav>
+			<span class="user-logo">Infosys Technologies</span>
+			<!-- <div class="payroll-year">  -->
+				<!-- <span> <i class="fa fa-calendar" aria-hidden="true"></i> -->
+					<!-- <select> -->
+					  <!-- <option> Payroll Year </option> -->
+					  <!-- <option> 2019</option> -->
+					  <!-- <option> 2018</option> -->
+					<!-- </select> -->
+				<!-- </span>  -->
+				<!-- <span> <i class="fa fa-user-o" aria-hidden="true"></i> -->
+					<!-- <select> -->
+					  <!-- <option> Client </option> -->
+					  <!-- <option> Full Service</option> -->
+					  <!-- <option> Self Service</option> -->
+					<!-- </select> -->
+				<!-- </span>  -->
+			<!-- </div> -->
+		  <!---user setting start here --->
+		  <div class="dropdown user-settings"> <span class="profile-pic">B</span>
+			<button class="btn" type="button" data-toggle="dropdown"> <img src="images/select-arrow2.png"/> </button>
+			<ul class="dropdown-menu">
+			  <li><a tabindex="-1" href="#"> <span class="user-name">B</span>
+				<p> <span>Bhavani Tadepalli</span> <span>btadepalli@checkmark.in</span> <span>Customer#: 122122</span> </p>
+				</a></li>
+				<li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> Account</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> User Management</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-lock custlock"></i> Change Password</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> Preferences</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+			</ul>
+		  </div>
+		  <!---user setting end here ---> 		  
+		</div>
+		<!--- body Rendering--->
+    <div class="right-workspace"> 
+      <div class="workspace-content">
+		<div class="row">
+			<div class="col-gl-3 col-md-3 col-sm-4 col-xs-12">
+				<div class="heading-button-row">
+					<h3 class="branch-head"><img src="images/empuser.png"> Employees <span class="emp-count" id="employeeCount">7</span> </h3>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"> <i class="fa fa-align-right" aria-hidden="true"></i></span> </button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav empnavbar-nav">
+							<ul class="mt-2">
+								<li class="active"> <a class="active" href="/Employee/empsetuptabs">Payroll <span class="sr-only">(current)</span></a> </li>
+								<li> <a href="/Employee/EmpDirectDeposit">Direct Deposit</a> </li>
+								
+								 <li><a href="/Ten99/Recipients">1099</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+			<div class="row">
+			  <div class="col-lg-3 col-md-3  col-sm-4 col-xs-12">
+				<div class="left-list-item">
+					<span class="head">Employee List</span>
+					<form class="search">
+						<div class="search__wrapper">
+							<input id="listSearchInput" type="text" onkeyup="myFunctionAuto()" placeholder="Search for..." class="search__field" onkeypress="searchFun()">
+							<button type="submit" id="search" class="fa fa-search search__icon"></button>
+							<label id="close" onclick="closeFun()"><img src="images/search-close.png"></label>
+						</div>
+					</form>
+					<!--<button class="search-item-btn" type="submit"><i class="fa fa-search"></i></button>-->
+					<ul id="listItems">
+						<li class="active"> <a href="#">Bhavani</a></li>
+						<li class=""> <a href="#">Rama Krishna</a></li>
+						<li class=""> <a href="#">Suman</a></li>
+						<li class=""> <a href="#">Srinivas</a></li>
+						<li class=""> <a href="#">Deepika</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light empnavtop1" style="top">
+					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"> <i class="fa fa-align-right" aria-hidden="true"></i></span> </button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav EmpsetupTab" id="#navbarNavAltMarkup">
+							<ul>
+								<li class="active"><a href="#wages" id="Wages" role="tab" data-toggle="tab">Wages</a></li>
+								<li><a href="#taxes" id="Taxes" role="tab" data-toggle="tab">Taxes</a></li>
+								<li><a href="#empincome" id="Income" role="tab" data-toggle="tab">Income</a></li>
+								<li><a href="#empdeduction" id="Deductions" role="tab" data-toggle="tab">Deductions</a></li>
+								<li><a href="#accruedhours" id="AccruedHours" role="tab" data-toggle="tab">Accrued Hours</a></li>
+								<li><a href="#ytd" id="YTDDetails" role="tab" data-toggle="tab">YTD</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<div class="col-lg-4 col-md-4  col-sm-5 col-xs-12">
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				<div class="tab-content tabs">
+					<!----------wages tab----------------->
+				<div role="tabpanel" class="tab-pane fade in active" id="wages">
+					<div class="form-feilds">
+						<div class="row">
+							<div class="emp-info-title">
+								Pay Type Info
+								<div class="tooltip">
+									<i class="fa fa-info-circle" aria-hidden="true"></i>
+									<p class=" tooltiptext">
+										<span><b>Salary per Pay Period:</b> If the employee is paid a salary, enter the amount that the employee  receives each pay period.</span>
+										<span><b>Hour Rate 1, 2, 3 &amp; 4:</b> If the employee is paid by the hour, enter the amount per hour in the edit box. You don’t have to enter .00 for whole dollar rates. Hour Categories and Hour Rate 1-4 calculate together to determine gross wages for an hourly employee.</span>
+										<span><b>Pay Frequency:</b> Use this drop-down list to choose how often the employee is paid. You can choose Daily, Weekly, Bi-Weekly (every two weeks), Semi-Monthly (twice a month), Monthly, Quarterly, Semi-Annually (twice a year) and Annually.</span>
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 salary">
+								<div class="form-group">
+									<label>Salary per Pay Period</label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label class="star"> Pay Frequency </label>
+									<select class="form-control">
+										<option value="1">Daily</option>
+										<option value="2">Weekly</option>
+										<option value="3">Biweekly</option>
+										<option value="4">Semi-monthly</option>
+										<option value="5">Monthly</option>
+										<option value="6">Quarterly</option>
+										<option value="7">Semi-annually</option>
+										<option value="8">Annually</option>
+									</select>            
+								</div>
+							</div>
+						</div>
+							<div class="row">
+								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									<div class="form-group">
+										<label>Hour Rate 1</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									<div class="form-group">
+										<label>Hour Rate 2</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									<div class="form-group">
+										<label>Hour Rate 3</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									<div class="form-group">
+										<label>Hour Rate 4</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									<div class="form-group">
+										<label>Hour Rate 5</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									<div class="form-group">
+										<label>Hour Rate 6</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									<div class="form-group">
+										<label>Hour Rate 7</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									<div class="form-group">
+										<label>Hour Rate 8</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+							</div>
+						<hr>
+						<div class="row">
+							<div class="emp-info-title">
+								Employement Details
+								<div class="tooltip">
+									<i class="fa fa-info-circle" aria-hidden="true"></i>
+									<p class=" tooltiptext">
+										<span><b>Hire Date:</b> Enter the date that the employee was hired.</span>
+										<span><b>Last Raise Date:</b> Enter the date that the employee last received a raise.</span>
+										<span><b>Termination Date:</b> Enter the date that the employee’s employment ended.</span>
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label>Hire Date</label>
+									<div id="datepicker2" class="input-group date" data-date-format="mm-dd-yyyy">
+										<input class="form-control" placeholder="mm/dd/yyyy" type="text" >
+										<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label>Last Raise Date</label>
+									<div id="datepicker3" class="input-group date" data-date-format="mm-dd-yyyy">
+										<input class="form-control" placeholder="mm/dd/yyyy" type="text">
+										<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label>Termination Date</label>
+									<div id="datepicker4" class="input-group date" data-date-format="mm-dd-yyyy">
+										<input class="form-control" placeholder="mm/dd/yyyy" type="text">
+										<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="row mb-3">
+							<div class="emp-info-title">
+								Department / Job Fixed Distribution
+								<div class="tooltip">
+									<i class="fa fa-info-circle" aria-hidden="true"></i>
+									<p class=" tooltiptext">
+										<span>
+											You can distribute an employee’s pay to as many as 10 departments or Distribution % MultiLedger Jobs by percentages. Percentages are automatically assigned based on the number of departments or Jobs assigned. For example, if two departments are assigned, the distribution percentage is 50% for each department. If the percentages are incorrect, you can click Modify Percentages and enter the correct values. The sum of the percentages must equal 100%.
+											Percentage distributions will not sort your employee list, this is based on the default department assigned on the Personal Tab. This distribution, however, does override the default department assigned on the Personal tab.
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 mt-1">
+								<button class="btn btn-primary2" type="button" onClick="openDepJobNav()"> Select Departments </button>
+								<button class="btn btn-primary2" type="button"  onClick="openJobNav()"> Select Jobs </button>
+								<button class="btn btn-primary2" type="button" data-toggle="modal" data-target="#myModal4"> Modify Percentages </button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 table-responsive">
+								 <table class="table table-bordered table-striped ledger-table">
+									<thead>
+										<tr>
+											<th>Department</th>
+											<th>%</th>
+										</tr>
+									</thead>
+									<tbody>            
+										<tr>
+											<td>Admin</td>
+											<td> <input type="text" name="" value="25"/></td>
+										</tr>
+										<tr>
+											<td>Department</td>
+											<td>50 </td>
+										</tr>
+										<tr>
+											<td>Department</td>
+											<td>50 </td>
+										</tr>
+										 <tr>
+											<td></td>
+											<td>100 </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="emp-info-title">
+								Comments
+								<div class="tooltip">
+									<i class="fa fa-info-circle" aria-hidden="true"></i>
+									<p class=" tooltiptext">
+										<span>
+											Use this text area for recording comments (such as dates of pay raises or prior pay rates) about the employee.
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<textarea class="form-control" cols="20" rows="5"></textarea>
+							</div>
+						</div>
+					</div>
+					<!---------department popup---------->
+					<div id="RightSidePopup4" class="overlay">
+						<div class="r-pop-content">
+							<div class="pop_head">
+								<h3>Department Fixed Distribution</h3>
+								<a href="javascript:void(0)" class="closebtn" onclick="closeDepJobNav()" title="Close">&times;</a>
+							</div>
+							<div class="overlay-content">
+								<div class="row mt-4">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										<ul class="pop-listItems">
+											<li class="active"> <a href=""> Admin </a></li>
+											<li><a href="#">  Development  </a></li>
+											<li><a href="#">  Operations </a></li>
+											<li><a href="#"> Sys Admin </a></li>
+											<li><a href="#"> Human Resource</a> </li>
+											<li><a href="#"> Marketing  </a></li>
+											<li><a href=""> Sales Force</a> </li>
+										</ul>
+										<div class="text-center mt-3">
+											<input class="btn btn-primary" type="button" name="save" value="Save">   
+											<input class="btn btn-danger" type="button" onclick="closeDepJobNav()" value="Cancel">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										<p>Select up to 10 departments. Clicking 'OK' with none selected will clear all departments. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+						<!------------jobs popup---------->
+						<div id="RightSidePopup7" class="overlay">
+							<div class="r-pop-content">
+								<div class="pop_head">
+									<h3>Jobs</h3>
+									<a href="javascript:void(0)" class="closebtn" onclick="closeJobNav()" title="Close">&times;</a>
+								</div>
+								<div class="overlay-content">
+									<div class="row mt-4">
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<ul class="pop-listItems">
+												<li class="active"> <a href=""> UI Designer </a></li>
+												<li><a href="#">  UX Designer  </a></li>
+												<li><a href="#">  .Net Developer </a></li>
+											</ul>
+											<div class="text-center mt-3">
+												<input class="btn btn-primary" type="button" name="save" value="Save">   
+												<input class="btn btn-danger" type="button" onclick="closeJobNav()" value="Cancel">
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<p>Select up to 10 jobs. Clicking 'OK' with none selected will clear all jobs. </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-----------modify percentage modal--------->
+						<div class="modal fade" id="myModal4" role="dialog">
+							<div class="modal-dialog">
+								<!-- Modal content-->
+								<div class="modal-content4">
+									<div class="modal-header4">
+										<button type="button" class="close crossclose" id="crossclose" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title4">Modify Percentages</h4>
+									</div>
+									<div class="modal-body4">
+										<div class="row">
+											<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+												<div class="form-group">
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+												<div class="form-group">
+													<label>%</label>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+												<div class="form-group">
+													<label class="mt-1">UI Designer</label>
+												</div>
+											</div>
+											<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+												<div class="form-group">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+												<div class="form-group">
+													<label class="mt-1">UI Designer</label>
+												</div>
+											</div>
+											<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+												<div class="form-group">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer4">
+										<input class="btn btn-primary" type="button" data-dismiss="modal" value="OK">
+										<input class="btn btn-danger" type="button" data-dismiss="modal" value="Cancel">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				<div role="tabpanel" class="tab-pane fade in" id="taxes">
+					<div class="row">
+						<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+							<div class="form-feilds">
+								<div class="emp-info-title insideTitle">
+									Federal Taxes 
+									<div class="tooltip">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<p class=" tooltiptext">
+											<span><b>Federal Table:</b> Use the drop-down list to select the appropriate federal tax table for the employee that coincided with the status claimed on the W4. If Exempt is selected, federal tax will not be withheld when the employee’s pay is calculated.</span>
+											<span><b> W-4 Allowances:</b> Enter the number of allowances claimed on the employee’s Form W-4.</span>
+											<span><b>Additional W/H:</b> If you want to withhold additional federal withholding for the employee (beyond the calculated amounts), enter the additional amount that you want to withhold per pay period. You can also enter the amount as a percentage of wages if the % checkbox is checked.</span>
+										</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="form-group">
+										<label>Federal Table</label>
+										<select class="form-control">
+											<option value="1">Single/Married Filing Separate</option>
+											<option value="2">Married Filing Jointly</option>
+											<option value="3">Head of Household</option>
+											<option disabled>------------------------</option>
+											<option value="4">Single</option>
+											<option value="5">Married</option>
+											<option value="6">Exempt</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>W-4 Allowances</label>
+									<input class="form-control" type="text">
+								</div>
+								<div class="row form-group">
+									<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+										<label>Additional W/H</label>
+										<input class="form-control" type="text">
+									</div>
+									<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 mt-2">
+										<label class="custcheckbox">
+											<input  type="checkbox">
+											<span class="checkspan">%</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-feilds mt-1">
+								<div class="emp-info-title insideTitle">
+									State Taxes 
+									<div class="tooltip">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<p class=" tooltiptext">
+											<span><b>SUTA State:</b> Use the drop-down list to select the appropriate state for SUTA reporting. The states that appear are those that have been added to the company with the State Taxes window.</span>
+											<span><b>Important:</b> SUTA State must be selected for each employee before saving employee information or a default SUTA State will be assigned to the employee</span>
+											<span><b>State Table:</b> Use the drop-down list to select the appropriate state tax table for the employee. The tables that appear in the list are those that have been added on the State Taxes window.</span>
+											<span><b>Allowances:</b> Enter the number of state allowances that the employee is claiming (usually, this is the number of federal allowances claimed on the employee’s Form W-4, Employee’s Withholding Allowance Certificate). CheckMark Payroll uses this number, when possible, to calculate the Exemption Total or Tax Credit Total for a selected state tax table.</span>
+											<span><b>Exemption and Tax Credit Total:</b> When possible, the Exemption Total or Tax Credit Total is calculated  for you and placed in the correct edit box.</span>
+											<span><b>Additional W/H:</b> If you want to withhold additional state withholding for the employee (beyond the calculated amounts), enter the additional amount that you want to withhold each pay period. You can also enter the amount as a percentage of wages if the % checkbox is checked.</span>
+										</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>SUTA State</label>
+									<select class="form-control">
+										<option value="1">None</option>
+										<option value="2">AK</option>
+										<option value="3">AL</option>
+										<option value="4">AR</option>
+										<option value="5">NM</option>
+										<option value="6">UT</option>
+										<option value="7">VA</option>
+										<option value="8">WV</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>State Table </label>
+									<select class="form-control">
+										<option value="1">None</option>
+										<option value="2">Exempt</option>
+										<option value="3">AK</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Allowances</label>
+									<input class="form-control "type="text">
+								</div>
+								<div class="form-group">
+									<label> Exemption Total </label>
+									<input type="text" name="" class="form-control" />
+							   </div>
+								<div class="form-group">
+									<label> Tax Credit Total </label>
+									<input type="text" name="" class="form-control" />
+							   </div>
+								<div class="row form-group">
+									<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+										<label> Additional W/H </label>
+										<input class="form-control" type="text">
+									</div>
+									<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 mt-2">
+										<label class="custcheckbox">
+											 <input type="checkbox">
+											<span class="checkspan">
+											%</span>
+										</label>
+									</div>
+								</div>
+								<a class="add-rate" href="https://www.checkmark.com/additional-tax-information?year=2019" target="_blank">Additional Tax Information <i class="fa fa-external-link" aria-hidden="true"></i></a>
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+							<div class="form-feilds">
+								<div class="emp-info-title insideTitle">
+									W-2 Options 
+									<div class="tooltip">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<p class=" tooltiptext">
+											<span>You should use a Circular E, Employer’s Tax Guide to verify the requirements for the following W-2 options.</span>
+											<span><b>Retirement Plan:</b> If Retirement Plan is checked, an ‘x’ will be printed in the appropriate box on the employee’s W-2 Statement.</span>
+											<span><b>Statutory Employee:</b> Statutory Employee If Statutory Employee is checked, an ‘x’ will be printed in the appropriate box on the employee’s W-2 Statement.</span>
+											<span><b>Sick Pay:</b> If Sick Pay is checked, an ‘x’ will be printed in the appropriate box on the employee’s W-2 Statement.</span>
+									   </p>
+									</div>
+								</div>
+								<div class="">
+									<label class="custcheckbox">
+										
+										<input type="checkbox">
+										<span class="checkspan">Retirement Plan</span>
+									</label>
+								</div>
+								<div class="">
+									<label class="custcheckbox">
+										 <input type="checkbox">
+										<span class="checkspan">
+										Statutory Employee</span>
+									</label>
+								</div>
+								<div class="">
+									<label class="custcheckbox">
+										 <input type="checkbox">
+										<span class="checkspan">
+										Sick Pay</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-feilds mt-1">
+								<div class="emp-info-title insideTitle">
+									Exempt From 
+									<div class="tooltip">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<p class=" tooltiptext">
+											<span>You should use a Circular E, Employer’s Tax Guide to verify the requirements for the following federal withholding options.</span>
+											<span><b>Social Security:</b> Check the Soc. Sec. Exempt option if an employee is exempt from Social Security.</span>
+											<span><b>Medicare:</b> Check the Medicare Exempt option if an employee is exempt from Medicare.</span>
+											<span><b>FUTA:</b> Check the FUTA Exempt checkbox if the employee is exempt from Federal unemployment tax.</span>
+											<span><b>SUTA:</b> Check the SUTA Exempt checkbox if the employee is exempt from State unemployment tax.</span>
+										</p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										<label class="custcheckbox">
+											 <input type="checkbox">
+											<span class="checkspan">
+											Social Secure</span>
+										</label>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										<label class="custcheckbox">
+											<input type="checkbox">
+											<span class="checkspan">
+											Medicare</span>
+										</label>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										<label class="custcheckbox">
+											 <input type="checkbox">
+											<span class="checkspan">
+											FUTA</span>
+										</label>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										<label class="custcheckbox">
+											<input type="checkbox">
+											<span class="checkspan">
+											SUTA</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-feilds mt-1">
+								<div class="emp-info-title insideTitle">
+									Employee Type 
+									<div class="tooltip">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<p class=" tooltiptext">
+											<span>Mark the Agricultural checkbox, If the employee is an agricultural employee.</span>
+										</p>
+									</div>
+								</div>
+								<div class="">
+									<label class="custcheckbox">
+										<input type="checkbox">
+										<span class="checkspan">
+										Agricultural</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-feilds mt-1">
+								<div class="emp-info-title insideTitle">
+									Local Tax 
+									<div class="tooltip">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<p class=" tooltiptext">
+											<span><b>Local:</b> Use the drop-down list to select the appropriate local tax for the employee. The taxes that appear in the list are those that have been set up on the Local Taxes window under Setup. If “None” is selected, local tax will not be withheld when the employee’s pay is calculated and employee earnings will not appear on the local taxes report.</span>
+											<span><b>Allowances:</b> Enter the number of local allowances that the employee is claiming.</span>
+											<span><b>Exemption and Tax Credit Total:</b> This amount should be calculated and entered into the correct box depending on how the local tax has been setup.</span>
+										</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Local</label>
+									<select class="form-control">
+										<option value="2">Aurora-CO</option>
+										<option value="9">CASDI</option>
+										<option value="10">NYC-Res-SGL</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Allowances</label>
+									<input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label>Exemption Total</label>
+									<input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label>Tax Credit Total</label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+							<div class="form-feilds">
+								<span class="emp-info-title insideTitle">
+									County Tax
+								</span>
+								<div class="form-group">
+									<label> County Code </label>
+									<input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label> County Taxable Wages </label>
+									<input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label> County Tax Withheld </label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<!----------------income tab----------------->
+				<div role="tabpanel" class="tab-pane fade in" id="empincome">
+					<div class="form-feilds">
+						<div class="row">
+							<div class="emp-info-title">
+								Assign Incomes
+								<div class="tooltip">
+									<i class="fa fa-info-circle" aria-hidden="true"></i>
+									<p class=" tooltiptext">
+										<span>
+											You can assign incomes other than salary or hourly wages for your employees. Before an Additional Income category can be assigned to an employee, it must be set up on the Additional Income window.
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label>Company Income Categories </label>
+									<select class="form-control">
+										<option>Bonus</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mt-2">
+								<input class="btn btn-primary  mt-0p" type="button" name="save" value="Assign" />
+							</div>
+						</div>
+						<hr />
+						<div class="row">
+							<div class="emp-info-title">
+								Employee's Additional Income
+								<div class="tooltip">
+									<i class="fa fa-info-circle" aria-hidden="true"></i>
+									<p class=" tooltiptext">
+										<span>
+											You can assign a maximum of eight Additional Income categories to each employee.
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 table-responsive">
+								<table class="table table-bordered table-striped ledger-table">
+									<thead>
+										<tr class="filters">
+											<th>Income</th>
+											<th>Type</th>
+											<th>Rate/Amt</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Bonus</td>
+											<td>F</td>
+											<td><input type="text"></td>
+											<td><button><i class="fa fa-check" aria-hidden="true"></i></button> <button><i class="fa fa-times" aria-hidden="true"></i></button> </td>
+										</tr>
+										<tr>
+											<td>Commission</td>
+											<td>V</td>
+											<td>1.0</td>
+											<td><button class="delact"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+										</tr>
+										<tr>
+											<td>Mileage</td>
+											<td>%</td>
+											<td>4</td>
+											<td><button><i class="fa fa-pencil" aria-hidden="true"></i></button> <button class="delact"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+										</tr>
+										<tr>
+											<td>ProfitShare</td>
+											<td>M</td>
+											<td>6</td>
+											<td><button><i class="fa fa-pencil" aria-hidden="true"></i></button> <button class="delact"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+										</tr>
+										<tr>
+											<td>Reported Tip</td>
+											<td>P</td>
+											<td>19</td>
+											<td><button><i class="fa fa-pencil" aria-hidden="true"></i></button> <button class="delact"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="ded-indicators"><span>V - Variable</span> <span>F - Fixed Amount</span> <span>% - Percent of Sales</span> <span>M - Mileage</span> <span> P - Piecework</span> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<!------------------deductions tab------------------->
+				<div role="tabpanel" class="tab-pane fade in" id="empdeduction">
+					<div class="form-feilds">
+						<div class="row">
+							<div class="emp-info-title">
+								Assign Deductions
+								<div class="tooltip">
+									<i class="fa fa-info-circle" aria-hidden="true"></i>
+									<p class=" tooltiptext">
+										<span>
+											In addition to tax deductions, you can Assign Deduction categories for an employee by using this SCREEN.  Before the dedection category is assigned to an employee, it
+											must be set up frist on the  Deductions windows.
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+								<div class="form-group">
+									<label>Company Deductions Categories </label>
+									<select class="form-control">
+										<option>401 (K)</option>
+										<option>403 (K)</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mt-2">
+								<input class="btn btn-primary  mt-0p" type="button" name="save" value="Assign" />
+							</div>
+						</div>
+						<hr />
+						<div class="row">
+							<div class="emp-info-title">
+								Employee's Deductions
+								<div class="tooltip">
+									<i class="fa fa-info-circle" aria-hidden="true"></i>
+									<p class=" tooltiptext">
+										<span>
+											You can assign a maximum of 16 Deduction categories to each employee.
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 table-responsive">
+								<table class="table table-bordered table-striped ledger-table">
+									<thead>
+										<tr class="filters">
+											<th>Deduction</th>
+											<th>Type</th>
+											<th>Rate/Amt</th>
+											<th>Limit</th>
+											<th>Match</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>401 (K)</td>
+											<td>F</td>
+											<td><input type="text" value="0.00"></td>
+											<td><input type="text" value="19000.00"></td>
+											<td><input type="text" value="5485.00"></td>
+											<td><button><i class="fa fa-check" aria-hidden="true"></i></button> <button><i class="fa fa-times" aria-hidden="true"></i></button> </td>
+										</tr>
+										<tr>
+											<td>403 (K)</td>
+											<td>V</td>
+											<td>1.0</td>
+											<td>19000.00</td>
+											<td>5485.00</td>
+											<td><button class="delact"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="ded-indicators"><span>V - Variable</span> <span>F - Fixed Amount</span> <span>% - Percent of Sales</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<!---------------------accrued hours tab----------------->
+				<div role="tabpanel" class="tab-pane fade in" id="accruedhours">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="form-feilds">
+								<div class="row">
+									<div class="emp-info-title">
+										Assign Categories
+										<div class="tooltip">
+											<i class="fa fa-info-circle" aria-hidden="true"></i>
+											<p class=" tooltiptext">
+												<span>
+													CheckMark Payroll accommodates up to six accrued hours per employee. Accrued Hours are hour categories where you track hours earned and used for each employee such as vacation or sick.
+												</span>
+											</p>
+										</div>
+									</div>
+									<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+										<div class="form-group">
+											<label>Company Categories </label>
+											<select class="form-control">
+												<option>Sick</option>
+												<option></option>
+												<option></option>
+												<option></option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mt-2">
+										<input class="btn btn-primary mt-0p" type="button" name="save" value="Assign">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="form-feilds-1">
+								<select class="" size="5" style="height:auto;">
+									<option>Regular</option>
+									<option>Sick </option>
+									<option>Advance </option>
+									<option>Regular </option>
+									<option>Regular </option>
+								</select>
+							</div>
+						</div>
+						<input class="btn btn-danger3" type="button" value="Remove" />
+					</div>
+					<div class="row mt-2">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div>
+								<div class="branches-feilds">
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<div class="form-group">
+												<span class="feilds-sub-heading">Total Accrued Hours Setup</span>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+											<div class="form-group">
+												<input class="form-control ckbox" type="text">
+												<span> Total Accrued Hours Available for Use  </span>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="form-group">
+												<label class="custcheckbox">
+													<input type="checkbox" checked >
+													<span class="checkspan">
+													Total Accrued Hours Maximum</span>
+												</label>
+												<input class="form-control ckbox" type="text">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="form-group">
+												<label class="custcheckbox">
+													<input type="checkbox">
+													<span class="checkspan">
+													Continue to Accrue after Hours are Used</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="form-inline">
+												<div class="form-group pull-left">
+													<label class="custcheckbox">
+														<input type="checkbox" checked >
+														<span class="checkspan">
+														Carry-Over Hours Limit</span>
+													</label>
+													<input class="form-control ckbox" type="text">
+												</div>
+												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 datelabeldiv">
+													<label> Carry-Over Date</label>
+												</div>
+												<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 cust-0mp">
+													<div class="form-group">
+														<div id="datepicker5" class="input-group date" data-date-format="mm-dd-yyyy">
+															<input class="form-control" type="text">
+															<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+											<div class="form-group">
+												<span class="feilds-sub-heading">Annual Accrued Hours Setup</span>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+											<div class="form-inline">
+											<div class="form-group">
+												<input class="form-control ckbox" type="text" name="fname">
+												<span> Current Year Accrued Hours  </span>
+											</div>
+										</div>
+									</div>
+										</div>
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-2">
+											<div class="form-group">
+												<label class="custcheckbox">
+													<input type="checkbox" checked >
+													<span class="checkspan">
+													Annual Accrual Maximum</span>
+												</label>
+												<input class="form-control ckbox" type="text">
+												<span> Hours </span>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="form-group">
+												<label class="custcheckbox">
+													<input type="checkbox" checked>
+													<span class="checkspan">
+													Annual Use Maximum</span>
+												</label>
+												<input class="form-control ckbox" type="text">
+												<span> Hours  </span>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+											<div class="form-group">
+												<span class="feilds-sub-heading">Calculation  Method</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="form-group">
+												<span class="cklable"> Earn </span>
+												<input class="form-control ckbox" type="text">
+												<span> Hours Per  </span>
+												<select class="form-control ckbox">
+														<option>Hour Worked</option>
+														<option>AK</option>
+														<option>AL-0</option>
+														<option>AL-S</option>
+														<option>AZ-5.1%</option>
+													</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="form-inline">
+											<div class="form-group">
+												<span> Up to </span>
+												<input class="form-control ckbox" type="text">
+												<span> Hours worked per pay period  </span>
+											</div>
+												</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-2">
+											<div class="form-inline">
+												<div class="form-group">
+													<span> Start receiving date from </span>
+													<div id="datepicker5" class="input-group date" data-date-format="mm-dd-yyyy">
+														<input class="form-control" type="text">
+														<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-2">
+											<div class="form-inline">
+												<div class="form-group">
+													<label class="custcheckbox">
+														<input type="checkbox" checked >
+														<span class="checkspan">
+														Hours Available for Use</span>
+													</label>
+													<select class="form-control ckbox-1">
+															<option>Date</option>
+															<option>AK</option>
+															<option>AL-0</option>
+															<option>AL-S</option>
+															<option>AZ-5.1%</option>
+														</select>
+													<div class="form-group" id="Date_HrsAvalforUseDiv">
+														<div id="datepicker5" class="input-group date" data-date-format="mm-dd-yyyy">
+															<input class="form-control" type="text">
+															<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+														</div>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>			
+				</div>
+				
+				
+				<!-----------------ytd tab-------------------->
+				<div role="tabpanel" class="tab-pane fade in" id="ytd">
+					<div class="row">
+						<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+							<div class="form-feilds">
+								<div class="emp-info-title insideTitle">
+									Wages
+									<div class="tooltip">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<p class=" tooltiptext">
+											<span><b>Salaried Employees:</b> For a salaried employee, enter the employee’s year-to-date salary as of the last completed quarter in the Salary edit box.</span>
+											<span><b>Hourly Employees:</b> For an hourly employee, click the Hours Detail button and enter the year-to-date hours and amounts for each hour category as of the last completed quarter.</span>
+										</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Salary </label>
+									<input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label>Hours </label>
+									<input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label>Amount </label>
+									<input class="form-control" type="text">
+								</div>
+								<button class="btn btn-primary2" type="button" onclick="openNavYtd()">Hours Details </button>
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+							<div class="form-feilds">
+								<div class="emp-info-title insideTitle">
+									Taxes
+									<div class="tooltip">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<p class=" tooltiptext">
+											<span>Enter the year-to-date amounts for each tax category. The state and locality names that appear are those that were set up for the employee with the Taxes view tab.</span>
+										</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label> Federal W/H </label>
+									<input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label> Social Security </label>
+									<input class="form-control" type="text">
+								</div>
+								<div class="form-group">
+									<label> Medicare </label>
+									<input class="form-control" type="text">
+								</div>
+									<div class="row form-group">
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<label class="custlabel">State-None</label>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<input class="form-control" type="text">
+										</div>
+									</div>
+									<div class="row form-group">
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<label class="custlabel">Local</label>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<input class="form-control" type="text">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 mt-1">
+								<div class="form-feilds">
+									<div class="emp-info-title insideTitle">
+										Additional Income
+										<div class="tooltip">
+											<i class="fa fa-info-circle" aria-hidden="true"></i>
+											<p class=" tooltiptext">
+												<span>Enter the year-to-date amounts for the Additional Income categories. The Additional Income categories that appear are those that were assigned to the employee in the Additional Income view tab.</span>
+												<span><b>Note:</b> The Additional Income  will not show in the YTD tab unless the Save button has been selected for the employee. If the categories do not show up in the YTD tab, click Save, then re-select the employee from the list.</span>
+											</p>
+										</div>
+									</div>
+									<table class="addl-table ledger-table">
+										<tbody>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 mt-1">
+								<div class="form-feilds">
+									<div class="emp-info-title insideTitle">
+										Deductions
+										<div class="tooltip">
+											<i class="fa fa-info-circle" aria-hidden="true"></i>
+											<p class=" tooltiptext">
+												<span>Enter the year-to-date amounts for the Deduction categories. The Deduction categories that appear are those that were assigned to the employee in the Deductions view tab.</span>
+												<span><b>  Note:</b> The Deductions  will not show in the YTD tab unless the Save button has been selected for the employee. If the categories do not show up in the YTD tab, click Save, then re-select the employee from the list. </span>
+											</p>
+										</div>
+									</div>
+									<table class="ded-table ledger-table">
+										<tbody>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+											<tr>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+												<td><input type="text" readonly="readonly" disabled="disabled"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 mt-1">
+								<div class="">
+									<div class="emp-info-title insideTitle">
+										Other Withholdings
+										<div class="tooltip">
+											<i class="fa fa-info-circle" aria-hidden="true"></i>
+											<p class=" tooltiptext">
+												<span>We will update later</span>
+											</p>
+										</div>
+									</div>
+									<div class="form-group">
+										<label>3rd Party Federal W/H </label>
+											<input class="form-control" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 mt-1">
+								<div class="">
+									<div class="emp-info-title insideTitle">
+										Net
+										<div class="tooltip">
+											<i class="fa fa-info-circle" aria-hidden="true"></i>
+											<p class=" tooltiptext">
+												<span>We will update later</span>
+											</p>
+										</div>
+									</div>
+									<div class="form-group">
+										<input class="form-control" type="text">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!----------hour details popup--------->
+						<div id="RightSidePopup5" class="overlay">
+							<div class="r-pop-content">
+								<div class="pop_head">
+									<h3>YTD Hours Detail</h3>
+									<a href="javascript:void(0)" class="closebtn" onclick="closeNavYtd()" title="Close">×</a>
+								</div>
+								<div class="overlay-content">
+									<div class="row mt-2">
+										<table class="table table-bordered table-striped ledger-table">
+											<thead>
+												<tr class="filters">
+													<th>HourCategory</th>
+													<th>Hours</th>
+													<th>Amount</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Regular</td>
+													<td><input class="form-control" type="text"></td>
+													<td><input class="form-control" type="text"></td>
+												</tr>
+												<tr>
+													<td>Overtime</td>
+													<td><input class="form-control" type="text"></td>
+													<td><input class="form-control" type="text"></td>
+												</tr>
+												<tr style="font-weight:bold;">
+													<td>Total</td>
+													<td><input class="form-control" type="text"></td>
+													<td><input class="form-control" type="text"></td>
+												</tr>
+												</tbody>
+										</table>
+										<div class="text-center">
+											<input class="btn btn-primary" type="button" onclick="closeNavYtd()" value="OK">
+											<input class="btn btn-danger" type="button" name="cancel" onclick="closeNavYtd()" value="Cancel">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<div class="row mt-2">
+					<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 text-center mb-1">
+						<input class="btn btn-primary" type="button" name="save" value="Save">
+						<input class="btn btn-danger" type="button" value="Cancel">
+						<input class="btn btn-dark" type="button" value="Clear">
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+ <p class="copy-rights-link mt-2"> © 2019 CheckMark, Inc.   | <a href="https://www.checkmark.com/" target="_blank"> Home </a> | <a href="https://www.checkmark.com/account/add-ticket" target="_blank"> Support </a> | <a href="https://blog.checkmark.com/" target="_blank"> Blog </a> | <a href="https://kb.checkmark.com/" target="_blank"> Knowledge Base </a> | <a href="https://www.checkmark.com/privacy-policy" target="_blank"> Privacy Policy </a> | <a href="https://www.checkmark.com/terms-of-Service" target="_blank"> Terms of Service </a> | <a href="https://www.checkmark.com/contact-us" target="_blank"> Contact Us </a> </p>
+</div>
+  </div>
+  
+ <!---------add employee popup---------> 
+<div id="RightSidePopup17" class="overlay">
+	<div class="r-pop-content">
+		<div class="pop_head">
+			<h3>Add Employee</h3>
+			<a href="javascript:void(0)" class="closebtn" onclick=" closeEmployeePersonalNav()" title="Close">&times;</a>
+		</div>
+		<div class="overlay-content">
+			<div class=" mt-4">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="form-group">
+							<label class="star">First Name</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="star">Last Name</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="text-center">
+							<input class="btn btn-primary" type="submit" name="OK" value="OK" />
+							<input class="btn btn-danger" type="button" name="cancel" value="Cancel" />
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<p><b>Adding a New Employee.</b></p>
+					<ol class="load-val">
+						<li>Enter the employee’s first name and last name and click OK.</li>
+						<li>The new employee is added to the employee list.</li>
+						<li>Select the New Employee from the Employee list.</li>
+						<li>Enter their personal information, wages, taxes, incomes, deductions, accrued hours and YTD details. </li>
+						<li>Click Save.</li>
+					</ol>
+					<p><b>Helpful Articles:</b></p>
+					<p><a href="https://kb.checkmark.com/article/how-to-set-up-employees-in-checkmark-payroll/" target="_blank">Setting Up Employees </a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

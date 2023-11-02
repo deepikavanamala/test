@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ERP - Payroll Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/fevicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="js/custom.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/checkmarkcrp.css" rel="stylesheet" type="text/css">
+<link href="css/crpresponsive.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!---left Navbar start here --->
+<nav id="sidebar">
+	<div class="sidebar-header"> <span class="logo"> <img src="images/logo-white.png"/> </span> <strong class="logo-icon"><img src="images/logo-icon.png"/></strong> </div>
+		<h4 class="left-nav-title">PAYROLL</h4>
+		  <ul class="panel-group" id="accordion2">
+				<li> <a href="dashboard.html" ><i class="fa fa-tachometer" aria-hidden="true"></i> <span>Dashboard</span> </a> </li>
+				
+				<li class="collapsegroup"><a href="#homeSubmenu" data-toggle="collapse" data-parent="#accordion2" class="dropdown-toggle mainnavcollapse collapsed"> <i class="fa fa-building-o"></i> <span> Company </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse in" id="homeSubmenu">
+						<li> <a class="" href="index.html"> <i class="fa fa-wrench"></i> <span> Company Information</span></a> </li>
+						<li> <a class="companyinfo"  href="AddCoPayroll.html"> <i class="fa fa-wrench"></i> <span> Additional Information</span></a> </li>
+						<li> <a class="payrollsettings active" href="federal-tax.html"><i class="fa fa-wrench"></i> <span> Payroll Settings</span></a></li>
+						<!-- <li class="collapsegroup"> -->
+							<!-- <a href="#homeSubmenu2" data-toggle="collapse" class="dropdown-toggle plusicon" aria-expanded="false"><i class="fa fa-wrench"></i><span>Accounting Settings</span><i class="subulicon fa fa-plus"></i> </a> -->
+							<!-- <ul class="collapse sidecollapse" id="homeSubmenu2"> -->
+								<!-- <li> <a><span>Profit Centers</span></a></li> -->
+								<!-- <li> <a><span>Chart of Accounts</span></a></li> -->
+								<!-- <li> <a><span>Interface Accounts</span></a></li> -->
+								<!-- <li> <a> <span>Account Balances</span></a></li> -->
+								<!-- <li> <a> <span>Financial Statements</span></a></li> -->
+								<!-- <li> <a> <span>Budget Amounts</span></a></li> -->
+								<!-- <li> <a> <span>Customer Setup</span></a></li> -->
+								<!-- <li> <a> <span>Vendor Setup</span></a></li> -->
+								<!-- <li> <a> <span>Item Setup</span></a></li> -->
+								<!-- <li> <a> <span>Job Setup</span></a></li> -->
+								<!-- <li> <a> <span>Sales Tax Setup</span></a></li> -->
+								<!-- <li> <a> <span> Salesperson Setup</span></a></li> -->
+								<!-- <li> <a> <span>Customer Terms</span></a></li> -->
+								<!-- <li> <a> <span>Ship Via</span></a></li> -->
+							<!-- </ul> -->
+						<!-- </li> -->
+					</ul>
+				</li>				
+				<li class="collapsegroup">
+					<a href="#homeSubmenu11" data-toggle="collapse" id="company" class="dropdown-toggle  mainnavcollapse" aria-expanded="undefined"><i class="fa fa-user" aria-hidden="true"></i><span>Employees </span><img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse" id="homeSubmenu11">
+						<li class=""> <a class="" href="employee-setup.html"> <i class="fa fa-user"></i> <span> Personal Information </span> </a></li>
+						<li> <a class=""  href="employee-setup.html"><i class="fa fa-wrench"></i><span> Additional Information</span></a></li>
+					</ul>
+				</li>			
+				<li class="collapsegroup"><a href="#homeSubmenu3" data-toggle="collapse" data-parent="#accordion3" class="dropdown-toggle mainnavcollapse" > <i class="fa fa-usd"></i> <span>Run Payroll </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse" id="homeSubmenu3">
+						<li> <a class="companyinfo"  href="distribute-hours.html"> <i class="fa fa-sitemap" aria-hidden="true"></i> <span> Distribute Hours</span></a> </li>
+						<li> <a class="payrollsettings" href="enter-hours.html"><i class="fa fa-clock-o" aria-hidden="true"></i> <span> Enter Hours</span></a></li>
+						<li> <a class="companyinfo"  href="calculate-index.html"> <i class="fa fa-calculator" aria-hidden="true"></i> <span> Calculate Pay</span></a> </li>
+						<li> <a class="payrollsettings" href="review-create-paychecks.html"> <i class="fa fa-file-text-o" aria-hidden="true"></i> <span> Review / Create Paychecks</span></a></li>
+						<li> <a class="companyinfo"  href="print-paychecks.html"> <i class="fa fa-print" aria-hidden="true"></i> <span> Print Paychecks</span></a> </li>
+						<li> <a class="payrollsettings" href="modify-paychecks.html"><i class="fa fa-pencil" aria-hidden="true"></i> <span> Modify Paychecks</span></a></li>
+						<li> <a class="companyinfo"  href="depts-jobs.html"> <i class="fa fa-th" aria-hidden="true"></i> <span> Allocate to Depts / Jobs</span></a> </li>
+						<li> <a class="payrollsettings" href="create-payments.html"> <i class="fa fa-usd" aria-hidden="true"></i> <span> Create Payments</span></a></li>
+						<li> <a class="companyinfo"  href="print-payments.html"> <i class="fa fa-file-text-o" aria-hidden="true"></i> <span> Print Payments</span></a> </li>
+						<li> <a class="payrollsettings" href="modify-payments.html"> <i class="fa fa-pencil" aria-hidden="true"></i> <span> Modify Payments</span></a></li>
+				    </ul>
+				</li>
+				
+			
+				<li class="collapsegroup"><a href="#homeSubmenu4" data-toggle="collapse" data-parent="#accordion4" class="dropdown-toggle" > <i class="fa fa-usd"></i> <span> Reports </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse " id="homeSubmenu4">
+						<li> <a class=""  href="employee-information.html"> <i class="fa fa-user" aria-hidden="true"></i> <span> Employee Information</span></a> </li>
+						<li> <a class="payrollsettings" href="employee-earnings.html"> <span> Employee Earnings</span></a></li>
+						<li> <a class="payrollsettings"  href="employee-paychecks.html"> <span> Employee Paychecks</span></a> </li>
+						<li> <a class="payrollsettings" href="employee-department-jobs.html"> <span> Departments/Jobs</span></a></li>
+						<li> <a class="payrollsettings"  href="federal-taxes.html"> <span> Federal Taxes</span></a> </li>
+						<li> <a class="payrollsettings" href="FUTATax-940.html"> <span> 940 FUTA Tax</span></a></li>
+						<li> <a class="payrollsettings"  href="state-taxes.html"> <span> State Taxes</span></a> </li>
+						<li> <a class="payrollsettings" href="local-taxes.html">  <span> Local Taxes</span></a></li>
+						<li> <a class="payrollsettings"  href="income-deductions.html">  <span> Income Deductions</span></a> </li>
+						<li> <a class="payrollsettings" href="employer-payments.html"> <span> Employer Payments</span></a></li>
+						<li> <a class="" href="w2w3-statements.html"> <span> W2 & W3 Statement</span></a></li>
+				    </ul>
+				</li>
+				
+		  </ul>
+		<h4 class="left-nav-title-others">OTHER</h4>
+	 <ul>
+            <li><a class="" href="HelpCenter.html"><i class="fa fa-info-circle"></i><span>Help Center</span></a></li>
+            <li><a class="paperprod" href="https://www.checkmark.com/store/paper-products" target="_blank"><i class="fa fa-file"></i><span>Paper Products</span></a></li>          
+        </ul>
+	  <div class="upgrade-premimum">
+			<p>Upgrade to Access Premium Features </p>
+			<button class="upgrade-btn"> Upgrade</button>
+	  </div>
+	  <a class="upgrade-star" href="#" title="Upgrade"><i class="fa fa-star" aria-hidden="true"></i></a>
+	  <nav class="navbar navbar-expand-lg navbar-light">
+			<button type="button" id="sidebarCollapse" class="left-panel-toggle"><img src="images/collapse-icon.png"/> <span> Collapse Menu </span></button>
+	  </nav>
+</nav>
+<!---left Navbar end here --->
+
+<div class="page-content" id="right-content">
+  <div class="container-fluid">
+    <div class="top-bar"> 
+			<nav class="navbar2 navbar-expand-lg navbar-light">
+				<button type="button" id="sidebarCollapse2" class="left-panel-toggle2"> <i class="fa fa-align-left" aria-hidden="true"></i> </button>
+			</nav>
+			<span class="user-logo">Infosys Technologies</span>
+			<!-- <div class="payroll-year">  -->
+				<!-- <span> <i class="fa fa-calendar" aria-hidden="true"></i> -->
+					<!-- <select> -->
+					  <!-- <option> Payroll Year </option> -->
+					  <!-- <option> 2019</option> -->
+					  <!-- <option> 2018</option> -->
+					<!-- </select> -->
+				<!-- </span>  -->
+				<!-- <span> <i class="fa fa-user-o" aria-hidden="true"></i> -->
+					<!-- <select> -->
+					  <!-- <option> Client </option> -->
+					  <!-- <option> Full Service</option> -->
+					  <!-- <option> Self Service</option> -->
+					<!-- </select> -->
+				<!-- </span>  -->
+			<!-- </div> -->
+		  <!---user setting start here --->
+		  <div class="dropdown user-settings"> <span class="profile-pic">B</span>
+			<button class="btn" type="button" data-toggle="dropdown"> <img src="images/select-arrow2.png"/> </button>
+			<ul class="dropdown-menu">
+			  <li><a tabindex="-1" href="#"> <span class="user-name">B</span>
+				<p> <span>Bhavani Tadepalli</span> <span>btadepalli@checkmark.in</span> <span>Customer#: 122122</span> </p>
+				</a></li>
+				<li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> Account</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> User Management</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-lock custlock"></i> Change Password</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> Preferences</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+			</ul>
+		  </div>
+		  <!---user setting end here ---> 		  
+		</div>
+		<!--- body Rendering--->
+		<div class="right-workspace"> 
+      <!---sub menu start here ---->
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"> <i class="fa fa-align-right" aria-hidden="true"></i></span> </button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<ul>
+						  <li><a  href="#">Federal Taxes</a><span class="sr-only">(current)</span> </li>
+						  <li><a href="state-tax.html">State Taxes </a> </li>
+						  <li><a href="local-tax.html">Local Taxes</a> </li>
+						  <li><a href="hour-categories.html">Hour Categories</a> </li>
+						  <li><a class="active" href="additional-income.html">Additional Income</a> </li>
+						  <li><a href="deductions.html">Deductions</a> </li>
+						  <li><a href="employer-payees.html">Employer Payees</a> </li>
+						  <li><a href="ledger-accounts.html">Ledger Accounts</a> </li>
+					  </ul>
+					</div>
+				</div>
+			</nav>
+      <!---sub menu end here ---->        
+     <div class="heading-button-row">  
+		<h3 class="branch-head"><img src="images/income.png"> Additional Income</h3> 
+		<div class="tooltip" style="top:1px;">
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+        <p class="tooltiptext">
+            <span>The Additional Income window allows you to set up the types of income, such as mileage or tips, that your company uses in addition to a salary or hourly wages to calculate an employee’s pay. You can set up your own or add pre-defined categories which can be modified if need be.</span>
+            <span>You can add up to 40 Additional Income categories for your company and assign up to eight per employee.</span>
+            <span><b>Important</b>: Do not delete any Additional Income categories once the first check for the year has been created. The only time a category should be deleted is after the New Year file has been created, but before any checks have been created.</span>
+            <span><b>Important</b>: Do not change the tax status on any Additional Income category once the first check of the year has been created. To make a change to the tax set up mid year, stop the category from being applied by simply modifying the amount/rate to zero. Then create a new category with the correct tax set up to be applied.</span>
+        </p>
+    </div>
+		<div class="buttons-top">
+			<button class="btn btn-primary2" onclick="openIncomeNavList()">Load From List </button>        
+			<button class="btn btn-danger2" type="submit" value="Delete">Delete</button>
+			<button class="btn btn-primary2" type="submit" value="New" onclick="openIncomeNav()">New <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+        </div>
+    </div>
+	<div class="workspace-content">
+        <div class="row">
+			 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+				<div class="left-list-item">
+					<span class="head">Additional Income </span> 
+					<form class="search">
+						  <div class="search__wrapper">
+								<input  id="listSearchInput" type="text" onkeyup="myFunctionAuto()" placeholder="Search for..." class="search__field"  onkeypress="myFunction()">
+								<button type="submit" id="search" class="fa fa-search search__icon"></button>
+								<label id="close"><img src="images/search-close.png"></label>
+						  </div>
+					</form>
+					 <!--<button class="search-item-btn" type="submit"><i class="fa fa-search"></i></button>-->
+					<ul id="listItems">
+						<li class="active"> <a href=""> Bonus </a></li>
+						<li><a href="">  Commission </a></li>
+						<li><a href="">  Mileage </a></li>
+						<li><a href="">  ProfitShare </a></li>
+					</ul>      
+				</div>
+			  </div>            
+      <!--  </div>-->
+			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+			  <div class="branches-feilds">       
+				  <div class="row">
+						 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+							   <label class="control-label">Additional Income</label>
+							   <input class="form-control" type="text" name="fname"/>
+							</div>
+						 </div>
+					</div>
+					<hr/>              
+				 <div class="row">
+				  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+				   <div class="form-group">
+					<div class="feilds-sub-heading">
+							Calculation Method
+							<div class="tooltip">
+								<i class="fa fa-info-circle" aria-hidden="true"></i>
+								<p class=" tooltiptext">
+									<span>
+										<b>Variable Amount</b>
+									</span>
+									<span>Amount paid to an employee varies with each pay period. If this option is selected, the amount that appears on the Calculate Pay window will always be 0.00 until you override and enter the amount of the additional income.</span>
+									<span>Fixed Amount per Pay Period, Hour Worked, 1st Chk of Month, or 1st Chk of the Quarter</span>
+									<span>
+										Select Fixed Amount per Pay Period if the amount paid to an employee is the same each pay period. Select Fixed Amount per Hour Worked, if the amount paid to an employee is multiplied by the number of hours worked that pay period. Hour Categories defined with Use in Calculations Based on Hours Worked are used in this calculation. Select Fixed Amount per 1st Check of Month if the amount paid to an employee is the same each month. The amount will be added to the first paycheck created for the month. Select Fixed Amount per 1st Check of the Quarter if the amount paid to an employee is the same each quarter. The amount will be added to the first paycheck created for the quarter.</span>
+									<span>
+										<b>Fixed % of Sales</b>
+									</span>
+									<span>
+										Select Fixed % of Sales if the Additional Income should be calculated as a fixed percentage of an employee’s total sales, such as a commission. The value entered here should be a percent, not a decimal value. For example, a decimal value of .015 should be entered as 1.5.
+									</span>
+									<span>
+										<b>Apply to Wages</b>
+									</span>
+									<span>
+										With option Fixed % of Sales selected, select Apply to Wage check box if the Additional Income should be calculated as a fixed percentage of an employee’s total wages. The value entered should be a percent, not a decimal value. For example a decimal rate of .015 should be entered as 1.5.
+									</span>
+									<span>
+										<b>Mileage Amount per Mile</b>
+									</span>
+									<span>
+										Select Mileage Amount/Mile if the Additional Income should be calculated on the number of miles an employee drives.
+									</span>
+									<span>
+										<b>Piecework  Rate</b>
+									</span>
+									<span>
+										Select Piecework Rate if the Additional Income should be calculated on a rate an employee receives for a quantity you enter.
+									</span>
+								</p>
+							</div>
+						</div>
+				   </div>
+				  </div>
+				 </div>
+				  <div class="row">
+						 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+							  <label class="control-label">Choose Calulation Method </label>
+							   <select class="form-control">
+									<option value="1" selected="selected">Fixed % of Sales</option>
+									<option value="2">CA</option>
+									<option value="3">CA</option>
+								  </select>
+							</div>
+						 </div>
+					</div>  
+					<div class="row">
+						 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+							  <label class="control-label">Fixed % of Sales</label>
+							   <input class="form-control" type="text" name="fname"/>
+							</div>
+						 </div>
+						 <div class="col-lg-4 col-sm-12 col-xs-12">
+						  <div class="form-group" style="padding-top: 20px;">
+							<label class="custcheckbox">
+							  <input type="checkbox">
+							  <span class="checkspan"></span>  Apply to Wages</label>
+						  </div>
+						</div>
+					  </div> 
+					  <hr/>
+					 <div class="row">
+							<div class="col-lg-4 col-sm-12 col-xs-12 checkboxes-group">
+							  <div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>  Omit from Net</label>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-sm-12 col-xs-12 checkboxes-group">
+							  <div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>   Post To Accounting</label>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-sm-12 col-xs-12 checkboxes-group">
+							  <div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>   Don't Post</label>
+							  </div>
+							</div>
+					  </div>
+					  <div class="row">
+							<div class="col-lg-4 col-sm-12 col-xs-12 checkboxes-group">
+							  <div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>   Omit from Gross Pay to Check Stubs</label>
+							  </div>
+							</div>					
+							<div class="col-lg-4 col-sm-12 col-xs-12 checkboxes-group">
+							  <div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>   Include with Wages for Dept/Job Posting</label>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-sm-12 col-xs-12 checkboxes-group">
+							  <div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>   Include in Disposable Wages Calculations </label>
+							  </div>
+							</div>
+					  </div>
+					  <hr/>        
+					  <div class="row">
+						<!--left items-->
+						  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 checkboxes-group">
+							   <div class="form-group">
+                                <div class="feilds-sub-heading">
+                                    Exempt From
+                                    <div class="tooltip tooltip2">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                        <p class=" tooltiptext">
+                                            <span>By checking the appropriate options, you can classify an Additional Income category as exempt from any combination of the following taxes: See your Circular E, Employer’s Tax Guide, state or local tax guide to determine the correct handling of individual income items. While all Additional Income categories will appear as part of Gross Wages, how they are reported on reports such as Form 941, State Wages Summary or W-2 Statements is determined by your setup here.</span>
+                                            <span>
+                                                <b>Federal Tax:</b> Check Federal Tax if the income should be exempt from Federal Withholding tax.
+                                            </span>
+                                            <span>
+                                                <b>Social Security:</b> Check Social Security if the income should be exempt from Social Security Withholding.
+                                            </span>
+                                            <span>
+                                                <b>Medicare:</b> Check Medicare if the income should be exempt from Medicare Withholding.
+                                            </span>
+                                            <span>
+                                                <b>FUTA:</b> Check FUTA if the income should be exempt from Federal Unemployment tax.
+                                            </span>
+                                            <span>
+                                                <b>State Tax:</b> Check State Tax if the income should be exempt from State Withholding tax.
+                                            </span>
+                                            <span>
+                                                <b>SUTA Check:</b> SUTA if the income should be exempt from State Unemployment tax.
+                                            </span>
+                                            <span>
+                                                <b>Local Tax:</b>  Check Local Tax if the income should be exempt from Local Withholding tax.
+                                            </span>
+                                            <span>
+                                                <b>Deduction (%):</b> Check Deduction (%) if the income should not have a Fixed % Deduction item applied to it.
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+						   <div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>  Fed Tax</label>
+							</div>
+							<div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>  Social Security</label>
+							 </div>
+							 <div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>  Medicare</label>
+							</div>
+							<div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>  FUTA</label>
+							 </div>
+							 <div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>  State Tax</label>
+							</div>
+							<div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>  SUTA</label>
+							 </div>
+							 <div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>  Local Tax</label>
+							</div>
+							<div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>  Deduction (%)</label>
+							 </div>
+						</div>
+						<!--Right items-->
+						<div class="col-lg-5 col-md-5 col-sm-8 col-xs-12 checkboxes-group">
+							<div class="form-group">
+                                <div class="feilds-sub-heading">
+                                    Tip Income
+                                    <div class="tooltip">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                        <p class=" tooltiptext">
+                                            <span>You can check either Allocated Tip or Reported Tip but not both.</span>
+                                            <span><b>Important:</b> When either Reported Tip or Allocated Tip is checked, other checkboxes, such as Tax Status options, are automatically set. However, you should verify these settings according to current tax laws.</span>
+                                            <span><b>Allocated Tip:</b> Check Allocated Tip if the income should not be included in net pay nor subject to any employee withholding taxes. The Allocated Tip amount will appear in the Allocated Tips box of the employee’s W-2 at year end.</span>
+                                            <span><b>Reported Tip:</b> Check Reported Tip if the income should not be included in net pay, but is subject to Social Security and Medicare, federal, state, and local withholding taxes. Reported tips are also subject to employer taxes.</span>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>  Allocated Tip</label>
+							  </div>
+							  <div class="form-group">
+								<label class="custcheckbox">
+								  <input type="checkbox">
+								  <span class="checkspan"></span>  Reported Tip</label>
+							  </div>
+							  <div class="form-group mt-3">
+								 <div class="feilds-sub-heading">
+                                    W-2 Options
+                                    <div class="tooltip tooltip2">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                        <p class=" tooltiptext">
+                                            <span>
+                                                <b>Box 10 - Dependent:</b> Check this option if you want the Additional Income amount to print in Care Benefits Box 10, Dependent Care Benefits, on the W-2.
+                                            </span>
+                                            <span>   <b>Box 11:</b> Check this option if you want the Additional Income amount to print in Box 11, Non-Qualified Deferred Compensation, on the W-2.</span>
+                                            <span>  <b>Sec 457:</b> Check this option if you have selected Box 11 and the nonqualified deferred compensation is a section 457(b) plan.</span>
+                                            <span>   <b>Box 12:</b> Check this option if you want the Additional Income’s code and amount to print in Box 12 of the W-2 Statement. A Code must also be entered when this is selected. Refer to the Instructions for Form W-2 from the IRS for the code to be entered here. Codes are entered as capital letters.</span>
+                                            <span>   <b>Box 12 Code:</b> Enter the one-letter code using a capital letter. Refer to the “Instructions for Form W-2” section of the IRS publication Federal Employment Tax Forms for guidelines about what codes to use for Box 12.</span>
+                                            <span>    <b>Box 14-Other:</b> Check this option if you want the Additional Income category’s amount and description to be included in Box 14 on the W-2 form.</span>
+
+                                        </p>
+                                    </div>
+                                </div>
+							   </div>
+								<div class="form-group">
+									<label class="custcheckbox">
+									  <input type="checkbox">
+									  <span class="checkspan"></span>  Box 10 -Dependent Care Benefits</label>
+								  </div>
+								  <div class="form-group">
+									<label class="custcheckbox" style="margin-right:20px;">
+									  <input type="checkbox">
+									  <span class="checkspan"></span>  Box 11 -Nonqualified Plan</label>                  
+									  <label class="custcheckbox">  
+									  <input type="checkbox">
+									  <span class="checkspan"></span> Sec. 457</label>
+									  
+								 
+								  </div>
+								  <div class="form-group">
+									<label class="custcheckbox">
+									  <input type="checkbox">
+									  <span class="checkspan"></span>  Box 12 -Code</label> &nbsp;
+									  <input class="form-control" style="width:100px; display:inline-block;" type="text"/>
+								  </div>
+								  <div class="form-group">
+									<label class="custcheckbox">
+									  <input type="checkbox">
+									  <span class="checkspan"></span>  Box 14 -Other</label>
+								  </div>    
+							</div>
+						</div>
+						<div class="row mt-3">
+						   <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-center">
+								<input class="btn btn-primary" type="submit" value="Save">
+								<input class="btn btn-danger" type="submit" value="Cancel">
+								<input class="btn btn-dark" type="submit" value="Clear">
+						   </div>  
+						</div>
+					</div>
+				</div>            
+			</div>
+		</div>
+		 <p class="copy-rights-link mt-2"> © 2019 CheckMark, Inc.   | <a href="https://www.checkmark.com/" target="_blank"> Home </a> | <a href="https://www.checkmark.com/account/add-ticket" target="_blank"> Support </a> | <a href="https://blog.checkmark.com/" target="_blank"> Blog </a> | <a href="https://kb.checkmark.com/" target="_blank"> Knowledge Base </a> | <a href="https://www.checkmark.com/privacy-policy" target="_blank"> Privacy Policy </a> | <a href="https://www.checkmark.com/terms-of-Service" target="_blank"> Terms of Service </a> | <a href="https://www.checkmark.com/contact-us" target="_blank"> Contact Us </a> </p>
+	</div>
+    <!--- body Rendering---> 
+  </div>
+</div>
+<!---popup start here --->
+<div id="RightSidePopup12" class="overlay">
+	<div class="r-pop-content">
+		<div class="pop_head">
+			<h3>New Income Category</h3>
+			<a href="javascript:void(0)" class="closebtn" onclick="closeIncomeNavList()" title="Close" >&times;</a>
+	   </div>
+	  <div class="overlay-content">  
+			<div class="row mt-4">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="form-group">
+						<label class="star">Name </label>
+						<input type="text" class="form-control" />
+					</div>
+					<div class="text-center">
+						<input class="btn btn-primary" type="submit" name="save" value="Save"/>   <input class="btn btn-danger" type="submit" name="cancel" value="Cancel"/>  
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<p>Nam feugiat neque nunc, ut condimentum nunc pharetra quis. Sed finibus lacus id nunc egestas condimentum. Duis vehicula pharetra lacus at efficitur. </p>
+					<p>Ut lacinia nunc ex, quis posuere nulla malesuada et. Integer bibendum tincidunt augue eu pretium. Nullam accumsan vehicula metus eu mattis. In hac habitasse platea dictumst. </p>
+					<p>Ut vulputate risus sodales nulla gravida, at consectetur urna pretium. Vestibulum consectetur accumsan ligula, eget accumsan purus dictum eu. Mauris diam odio, varius vel orci condimentum, ultrices rhoncus urna. </p>
+				</div>
+			</div>
+	  </div>
+  </div>
+</div>
+<div id="RightSidePopup13" class="overlay">
+	<div class="r-pop-content">
+		<div class="pop_head">
+			<h3>Load Additional Income Values</h3>
+			<a href="javascript:void(0)" class="closebtn" onclick="closeIncomeNav()" title="Close">&times;</a>
+	   </div>
+	  <div class="overlay-content"> 
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<ul class="pop-listItems">
+					<li class="active"> <a href=""> Aurora-CO </a></li>
+					<li><a href="">  CASDI  </a></li>
+					<li><a href="">  Denver-CO </a></li>
+					<li><a href="">  Grnwd Vlge-C </a></li>
+					<li><a href="#"> Kansas City</a> </li>
+					<li><a href="#">NYC-Res-MAR </a></li>
+					<li><a href="">St Louis MO</a> </li>
+				</ul>      
+				<div class="text-center mt-3"> 
+					<input type="submit" class="btn btn-primary" value="Ok"/>              
+					<input class="btn btn-danger" onclick="closeNav()" title="Close" value="Close"/>
+					</div>
+				</div>
+				   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				   <p> Select a state by clicking it in the list.</p>
+					<p>If you need to select more than one table, drag through the list to highlight the desired names. To select non-consecutive states, hold down the CTRL (Windows) key or Command (   ) key (Macintosh) and click the desired names.</p>
+					<p> Click OK. </p>
+				</div>
+			</div>
+	  </div>
+</div>
+<script src="js/datepicker.js"></script>
+<link href="css/datepicker.css" rel="stylesheet" type="text/css" />
+</body>
+</html>

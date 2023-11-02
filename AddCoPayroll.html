@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ERP - Payroll Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/fevicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/checkmarkcrp.css" rel="stylesheet" type="text/css">
+<link href="css/crpresponsive.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!---left Navbar start here --->
+<nav id="sidebar">
+	<div class="sidebar-header"> <span class="logo"> <img src="images/logo-white.png"/> </span> <strong class="logo-icon"><img src="images/logo-icon.png"/></strong> </div>
+		<h4 class="left-nav-title">PAYROLL</h4>
+		  <ul class="panel-group" id="accordion2">
+				<li> <a href="dashboard.html" ><i class="fa fa-tachometer" aria-hidden="true"></i> <span>Dashboard</span> </a> </li>
+				
+				<li class="collapsegroup"><a href="#homeSubmenu" data-toggle="collapse" data-parent="#accordion2" class="dropdown-toggle mainnavcollapse collapsed"> <i class="fa fa-building-o"></i> <span> Company </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse in" id="homeSubmenu">
+						<li> <a href="index.html"> <i class="fa fa-wrench"></i> <span> Company Information</span></a> </li>
+						<li> <a class="active" class="companyinfo"  href="AddCoPayroll.html"> <i class="fa fa-wrench"></i> <span> Additional Information</span></a> </li>
+						<li> <a class="payrollsettings" href="federal-tax.html"><i class="fa fa-wrench"></i> <span> Payroll Settings</span></a></li>
+						<!-- <li class="collapsegroup"> -->
+							<!-- <a href="#homeSubmenu2" data-toggle="collapse" class="dropdown-toggle plusicon" aria-expanded="false"><i class="fa fa-wrench"></i><span>Accounting Settings</span><i class="subulicon fa fa-plus"></i> </a> -->
+							<!-- <ul class="collapse sidecollapse" id="homeSubmenu2"> -->
+								<!-- <li> <a><span>Profit Centers</span></a></li> -->
+								<!-- <li> <a><span>Chart of Accounts</span></a></li> -->
+								<!-- <li> <a><span>Interface Accounts</span></a></li> -->
+								<!-- <li> <a> <span>Account Balances</span></a></li> -->
+								<!-- <li> <a> <span>Financial Statements</span></a></li> -->
+								<!-- <li> <a> <span>Budget Amounts</span></a></li> -->
+								<!-- <li> <a> <span>Customer Setup</span></a></li> -->
+								<!-- <li> <a> <span>Vendor Setup</span></a></li> -->
+								<!-- <li> <a> <span>Item Setup</span></a></li> -->
+								<!-- <li> <a> <span>Job Setup</span></a></li> -->
+								<!-- <li> <a> <span>Sales Tax Setup</span></a></li> -->
+								<!-- <li> <a> <span> Salesperson Setup</span></a></li> -->
+								<!-- <li> <a> <span>Customer Terms</span></a></li> -->
+								<!-- <li> <a> <span>Ship Via</span></a></li> -->
+							<!-- </ul> -->
+						<!-- </li> -->
+					</ul>
+				</li>				
+				<li class="collapsegroup">
+					<a href="#homeSubmenu11" data-toggle="collapse" id="company" class="dropdown-toggle  mainnavcollapse" aria-expanded="undefined"><i class="fa fa-user" aria-hidden="true"></i><span>Employees </span><img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse" id="homeSubmenu11">
+						<li class=""> <a class="" href="employee-setup.html"> <i class="fa fa-user"></i> <span> Personal Information </span> </a></li>
+						<li> <a class=""  href="employee-setup.html"><i class="fa fa-wrench"></i><span> Additional Information</span></a></li>
+					</ul>
+				</li>			
+				<li class="collapsegroup"><a href="#homeSubmenu3" data-toggle="collapse" data-parent="#accordion3" class="dropdown-toggle mainnavcollapse" > <i class="fa fa-usd"></i> <span>Run Payroll </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse" id="homeSubmenu3">
+						<li> <a class="companyinfo"  href="distribute-hours.html"> <i class="fa fa-sitemap" aria-hidden="true"></i> <span> Distribute Hours</span></a> </li>
+						<li> <a class="payrollsettings" href="enter-hours.html"><i class="fa fa-clock-o" aria-hidden="true"></i> <span> Enter Hours</span></a></li>
+						<li> <a class="companyinfo"  href="calculate-index.html"> <i class="fa fa-calculator" aria-hidden="true"></i> <span> Calculate Pay</span></a> </li>
+						<li> <a class="payrollsettings" href="review-create-paychecks.html"> <i class="fa fa-file-text-o" aria-hidden="true"></i> <span> Review / Create Paychecks</span></a></li>
+						<li> <a class="companyinfo"  href="print-paychecks.html"> <i class="fa fa-print" aria-hidden="true"></i> <span> Print Paychecks</span></a> </li>
+						<li> <a class="payrollsettings" href="modify-paychecks.html"><i class="fa fa-pencil" aria-hidden="true"></i> <span> Modify Paychecks</span></a></li>
+						<li> <a class="companyinfo"  href="depts-jobs.html"> <i class="fa fa-th" aria-hidden="true"></i> <span> Allocate to Depts / Jobs</span></a> </li>
+						<li> <a class="payrollsettings" href="create-payments.html"> <i class="fa fa-usd" aria-hidden="true"></i> <span> Create Payments</span></a></li>
+						<li> <a class="companyinfo"  href="print-payments.html"> <i class="fa fa-file-text-o" aria-hidden="true"></i> <span> Print Payments</span></a> </li>
+						<li> <a class="payrollsettings" href="modify-payments.html"> <i class="fa fa-pencil" aria-hidden="true"></i> <span> Modify Payments</span></a></li>
+				    </ul>
+				</li>
+				
+			
+				<li class="collapsegroup"><a href="#homeSubmenu4" data-toggle="collapse" data-parent="#accordion4" class="dropdown-toggle" > <i class="fa fa-usd"></i> <span> Reports </span> <img class="sm-menu-arrow" src="images/drpdwnicon.png"> </a>
+					<ul class="collapse " id="homeSubmenu4">
+						<li> <a class=""  href="employee-information.html"> <span> Employee Information</span></a> </li>
+						<li> <a class="payrollsettings" href="employee-earnings.html"> <span> Employee Earnings</span></a></li>
+						<li> <a class="payrollsettings"  href="employee-paychecks.html"> <span> Employee Paychecks</span></a> </li>
+						<li> <a class="payrollsettings" href="employee-department-jobs.html"> <span> Departments/Jobs</span></a></li>
+						<li> <a class="payrollsettings"  href="federal-taxes.html"> <span> Federal Taxes</span></a> </li>
+						<li> <a class="payrollsettings" href="FUTATax-940.html"> <span> 940 FUTA Tax</span></a></li>
+						<li> <a class="payrollsettings"  href="state-taxes.html"> <span> State Taxes</span></a> </li>
+						<li> <a class="payrollsettings" href="local-taxes.html">  <span> Local Taxes</span></a></li>
+						<li> <a class="payrollsettings"  href="income-deductions.html">  <span> Income Deductions</span></a> </li>
+						<li> <a class="payrollsettings" href="employer-payments.html"> <span> Employer Payments</span></a></li>
+						<li> <a class="" href="w2w3-statements.html"> <span> W2 & W3 Statement</span></a></li>
+				    </ul>
+				</li>
+				
+		  </ul>
+		<h4 class="left-nav-title-others">OTHER</h4>
+	  <ul>
+            <li><a class="" href="HelpCenter.html"><i class="fa fa-info-circle"></i><span>Help Center</span></a></li>
+            <li><a class="paperprod" href="https://www.checkmark.com/store/paper-products" target="_blank"><i class="fa fa-file"></i><span>Paper Products</span></a></li>          
+        </ul>
+	  <div class="upgrade-premimum">
+			<p>Upgrade to Access Premium Features </p>
+			<button class="upgrade-btn"> Upgrade</button>
+	  </div>
+	  <a class="upgrade-star" href="#" title="Upgrade"><i class="fa fa-star" aria-hidden="true"></i></a>
+	  <nav class="navbar navbar-expand-lg navbar-light">
+			<button type="button" id="sidebarCollapse" class="left-panel-toggle"><img src="images/collapse-icon.png"/> <span> Collapse Menu </span></button>
+	  </nav>
+</nav>
+<!---left Navbar end here --->
+
+<div class="page-content" id="right-content">
+  <div class="container-fluid">
+		<div class="top-bar"> 
+			<nav class="navbar2 navbar-expand-lg navbar-light">
+				<button type="button" id="sidebarCollapse2" class="left-panel-toggle2"> <i class="fa fa-align-left" aria-hidden="true"></i> </button>
+			</nav>
+			<span class="user-logo">Infosys Technologies</span>
+			<!-- <div class="payroll-year">  -->
+				<!-- <span> <i class="fa fa-calendar" aria-hidden="true"></i> -->
+					<!-- <select> -->
+					  <!-- <option> Payroll Year </option> -->
+					  <!-- <option> 2019</option> -->
+					  <!-- <option> 2018</option> -->
+					<!-- </select> -->
+				<!-- </span>  -->
+				<!-- <span> <i class="fa fa-user-o" aria-hidden="true"></i> -->
+					<!-- <select> -->
+					  <!-- <option> Client </option> -->
+					  <!-- <option> Full Service</option> -->
+					  <!-- <option> Self Service</option> -->
+					<!-- </select> -->
+				<!-- </span>  -->
+			<!-- </div> -->
+		  <!---user setting start here --->
+		  <div class="dropdown user-settings"> <span class="profile-pic">B</span>
+			<button class="btn" type="button" data-toggle="dropdown"> <img src="images/select-arrow2.png"/> </button>
+			<ul class="dropdown-menu">
+			  <li><a tabindex="-1" href="#"> <span class="user-name">B</span>
+				<p> <span>Bhavani Tadepalli</span> <span>btadepalli@checkmark.in</span> <span>Customer#: 122122</span> </p>
+				</a></li>
+				<li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> Account</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> User Management</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-lock custlock"></i> Change Password</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-wrench"></i> Preferences</a></li>
+			  <li><a tabindex="-1" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+			</ul>
+		  </div>
+		  <!---user setting end here ---> 		  
+		</div>
+		<!--- body Rendering--->
+		<div class="right-workspace"> 
+      <!---sub menu start here ---->
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"> <i class="fa fa-align-right" aria-hidden="true"></i></span> </button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			  <div class="navbar-nav">
+				<ul>
+				  <li> <a  class="active" href="AddCoPayroll.html" tabindex="0">Payroll <span class="sr-only">(current)</span></a> </li>
+				  <li> <a href="DirectDeposit.html">Direct Deposit</a> </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+      <!---sub menu end here ---->
+         
+          <div class="heading-button-row">  
+            <h3 class="branch-head"><img src="images/cominfo.png">  Additional Company Information</h3> 
+		   </div>
+<div class="workspace-content"> 
+<div class="form-feilds">
+			  <div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+				  <div class="form-group">
+					<label class="star">Payroll Year </label>
+					<select class="form-control">
+						<option>2022</option>
+						<option>2023</option>
+					</select>
+				  </div>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+				  <input class="btn btn-primary" type="submit" name="save" value="Save" tabindex="22"/>
+				  <input class="btn btn-danger" type="submit" name="cancel" value="Cancel" tabindex="23"/>
+				  <input class="btn btn-dark" type="button" name="clear" value="Clear" tabindex="24"/>
+				</div>
+			  </div>
+      </div>
+      </div>
+      <p class="copy-rights-link"> © 2019 CheckMark, Inc.   | <a href="#"> Home </a> | <a href="#"> Support </a> | <a href="#"> Blog </a> | <a href="#"> Knowledge Base </a> | <a href="#"> Privacy Policy </a> | <a href="#"> Terms and Conditions of Use </a> | <a href="#"> Contact Us </a> </p>
+    </div>
+    <!--- body Rendering---> 
+  </div>
+</div>
+<script src="js/datepicker.js"></script>
+<link href="css/datepicker.css" rel="stylesheet" type="text/css" />
+</body>
+</html>
